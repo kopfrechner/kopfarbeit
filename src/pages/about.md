@@ -1,9 +1,9 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "The Art of \"KopfarbeIT\""
+title: "About"
 ---
 
-Welcome. You’ve stumbled upon my digital garden—a collection of thoughts, discoveries, and the continuous evolution of my understanding of technology.
+Welcome. You’ve stumbled upon my digital garden — a collection of thoughts, discoveries, and the continuous evolution of my understanding of technology.
 
 ![Banner Image](/about-banner.png)
 
