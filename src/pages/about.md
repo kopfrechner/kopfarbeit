@@ -11,6 +11,8 @@ This blog is, first and foremost, a documentation for myself. It is a log of thi
 
 ## The Journey
 
+<img src="/christoph-kopf.png" class="sm:float-right sm:w-1/3 sm:ml-4 rounded-md mb-4" alt="Christoph Kopf" />
+
 My journey is rooted in a deep curiosity about how things work, specifically in the realm of **Software Engineering**. I view engineering not just as code, but as a discipline of problem-solving, crafting, and refining.
 
 I am driven by the principles of **Agile Methodologies**—not just as processes, but as a mindset of adaptability and continuous improvement. My technical foundation is built on **.NET**, but my explorations extend far beyond specific frameworks into the broader landscape of **Distributed Architectures**, **Practices**, and **Paradigms**.
