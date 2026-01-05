@@ -1,9 +1,7 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "The Art of \"Kopfarbeit\""
 ---
-
-# The Art of "Kopfarbeit"
 
 Welcome. You’ve stumbled upon my digital garden—a collection of thoughts, discoveries, and the continuous evolution of my understanding of technology.
 
