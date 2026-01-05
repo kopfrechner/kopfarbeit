@@ -5,6 +5,8 @@ title: "The Art of \"KopfarbeIT\""
 
 Welcome. You’ve stumbled upon my digital garden—a collection of thoughts, discoveries, and the continuous evolution of my understanding of technology.
 
+![Banner Image](/about-banner.png)
+
 This blog is, first and foremost, a documentation for myself. It is a log of things I learn, things I build, and things that fascinate me. But as with all knowledge, it gains value when shared. So, I’m sharing it here, hoping that some of it resonates with you or helps you on your own path.
 
 ## The Journey
