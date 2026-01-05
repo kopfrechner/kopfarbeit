@@ -1,6 +1,7 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 import Socials from "./Socials.astro";
+import LinkButton from "./LinkButton.astro";
 
 const currentYear = new Date().getFullYear();
 
@@ -23,10 +24,29 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
     ]}
   >
     <Socials />
-    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
+    <div
+      class="my-2 flex flex-col items-center sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-2"
+    >
       <span>Copyright &#169; {currentYear}</span>
-      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
+      <span class="hidden sm:inline">|</span>
       <span>All rights reserved.</span>
+      <span class="hidden sm:inline">|</span>
+      <span>
+        Built with
+        <LinkButton
+          class="underline decoration-dashed underline-offset-4 hover:text-accent"
+          href="https://github.com/withastro/astro"
+          target="_blank"
+          rel="noopener noreferrer">Astro</LinkButton
+        >
+        <LinkButton
+          class="underline decoration-dashed underline-offset-4 hover:text-accent"
+          href="https://github.com/satnaing/astro-paper"
+          target="_blank"
+          rel="noopener noreferrer">Paper</LinkButton
+        >
+        <span class="text-red-500">❤️</span>
+      </span>
     </div>
   </div>
 </footer>
