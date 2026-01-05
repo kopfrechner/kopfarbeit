@@ -6,6 +6,7 @@ title: Predefined color schemes
 slug: predefined-color-schemes
 featured: false
 draft: false
+archived: true
 tags:
   - color-schemes
 description:

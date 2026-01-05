@@ -5,6 +5,7 @@ pubDatetime: 2022-06-06T04:06:31Z
 slug: example-draft-post
 featured: false
 draft: true
+archived: true
 tags:
   - TypeScript
   - Astro

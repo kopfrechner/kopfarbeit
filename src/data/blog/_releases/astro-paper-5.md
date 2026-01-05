@@ -1,6 +1,7 @@
 ---
 pubDatetime: 2025-03-08T08:18:19.693Z
 title: AstroPaper 5.0
+archived: true
 slug: astro-paper-v5
 featured: true
 ogImage: ../../../assets/images/AstroPaper-v5.png
