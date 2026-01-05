@@ -3,35 +3,31 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+# The Art of "Kopfarbeit"
 
-![Astro Paper](public/astropaper-og.jpg)
+Welcome. You’ve stumbled upon my digital garden—a collection of thoughts, discoveries, and the continuous evolution of my understanding of technology.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+This blog is, first and foremost, a documentation for myself. It is a log of things I learn, things I build, and things that fascinate me. But as with all knowledge, it gains value when shared. So, I’m sharing it here, hoping that some of it resonates with you or helps you on your own path.
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+## The Journey
 
-## Features
+My journey is rooted in a deep curiosity about how things work, specifically in the realm of **Software Engineering**. I view engineering not just as code, but as a discipline of problem-solving, crafting, and refining.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+I am driven by the principles of **Agile Methodologies**—not just as processes, but as a mindset of adaptability and continuous improvement. My technical foundation is built on **.NET**, but my explorations extend far beyond specific frameworks into the broader landscape of **Distributed Architectures**, **Practices**, and **Paradigms**.
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+## Continuous Evolution
 
-and so much more.
+Technology never stands still, and neither do I.
 
-## Show your support
+I am deeply interested in how **Artificial Intelligence** is reshaping the landscape of engineering—transforming how we build, secure, and interact with software. It’s not just about the hype; it’s about the practical application of **Engineering with AI** to solve real problems.
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+Recently, the critical realm of **Security** has also captured my interest. As systems become more complex and distributed, understanding the nuances of securing them is becoming a fundamental part of my work.
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+## What You'll Find Here
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+This is a space for:
+*   **Tech**: Deep dives into code, architecture, and emerging tools.
+*   **People**: Reflections on the human side of engineering and collaboration.
+*   **Processes**: Thoughts on how we work, improve, and deliver value.
 
-Kyay zuu! 🙏🏼
+Thank you for visiting.
