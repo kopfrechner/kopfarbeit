@@ -5,7 +5,7 @@ draft: true
 archived: true
 slug: astro-paper-v5
 featured: true
-ogImage: ../../../assets/images/AstroPaper-v5.png
+ogImage: ../../../../assets/images/AstroPaper-v5.png
 tags:
   - release
 description: "AstroPaper v5: keep the clean look, updates under the hood."
