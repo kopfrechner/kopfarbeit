@@ -33,6 +33,8 @@ const {
   timezone,
   tags,
   hideEditPost,
+
+  archived,
 } = post.data;
 
 const { Content } = await render(post);
@@ -90,6 +92,16 @@ const nextPost =
     class:list={["app-layout pb-12", { "mt-8": !SITE.showBackButton }]}
     data-pagefind-body
   >
+    {
+      archived && (
+        <div class="border-skin-accent text-skin-base bg-skin-card/50 mb-6 rounded-lg border border-dashed p-4">
+          <p class="italic">
+            This post is archived. It is hidden from the main feed but preserved
+            here for reference.
+          </p>
+        </div>
+      )
+    }
     <h1
       transition:name={slugifyStr(title)}
       class="inline-block text-2xl font-bold text-accent sm:text-3xl"
