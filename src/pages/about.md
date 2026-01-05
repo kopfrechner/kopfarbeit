@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "The Art of \"Kopfarbeit\""
+title: "The Art of \"KopfarbeIT\""
 ---
 
 Welcome. You’ve stumbled upon my digital garden—a collection of thoughts, discoveries, and the continuous evolution of my understanding of technology.
