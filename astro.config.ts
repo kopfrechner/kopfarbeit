@@ -11,17 +11,17 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  integrations: [
-    sitemap({
-      filter: page =>
-        (SITE.showArchives || !page.endsWith("/archives")) &&
-        !page.includes("/search") &&
-        !page.includes("/tags"),
-    }),
-  ],
+  integrations: [sitemap({
+    filter: page =>
+      (SITE.showArchives || !page.endsWith("/archives")) &&
+      !page.includes("/search") &&
+      !page.includes("/tags"),
+  }), react()],
   markdown: {
     remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
     shikiConfig: {
