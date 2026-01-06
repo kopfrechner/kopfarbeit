@@ -5,13 +5,13 @@ title: "About"
 
 Welcome. You’ve stumbled upon my digital garden — a collection of thoughts, discoveries, and the continuous evolution of my understanding of technology.
 
-![Banner Image](/about-banner.png)
+![Banner Image](/about-banner.webp)
 
 This blog is, first and foremost, a documentation for myself. It is a log of things I learn, things I build, and things that fascinate me. But as with all knowledge, it gains value when shared. So, I’m sharing it here, hoping that some of it resonates with you or helps you on your own path.
 
 ## The Journey
 
-<img src="/christoph-kopf.png" class="sm:float-right sm:w-1/3 sm:ml-4 rounded-md mb-4" alt="Christoph Kopf" />
+<img src="/christoph-kopf.webp" class="sm:float-right sm:w-1/3 sm:ml-4 rounded-md mb-4" alt="Christoph Kopf" />
 
 My journey is rooted in a deep curiosity about how things work, specifically in the realm of **Software Engineering**. I view engineering not just as code, but as a discipline of problem-solving, crafting, and refining.
 
