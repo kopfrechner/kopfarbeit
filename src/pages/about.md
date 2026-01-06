@@ -11,7 +11,7 @@ This blog is, first and foremost, a documentation for myself. It is a log of thi
 
 ## The Journey
 
-<img src="/christoph-kopf.webp" class="sm:float-right sm:w-1/3 sm:ml-4 rounded-md mb-4" alt="Christoph Kopf" />
+<img src="/profile.webp" class="sm:float-right sm:w-1/3 sm:ml-4 rounded-md mb-4" alt="Christoph Kopf" />
 
 My journey is rooted in a deep curiosity about how things work, specifically in the realm of **Software Engineering**. I view engineering not just as code, but as a discipline of problem-solving, crafting, and refining.
 
