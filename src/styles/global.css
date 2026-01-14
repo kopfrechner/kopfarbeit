@@ -93,14 +93,12 @@ html[data-theme="dark"] {
     Using SVG for grain/noise texture 
     This creates a lightweight, scalable noise pattern without external image files
   */
-  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/innerText%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
   background-size: 100px 100px;
   /* Smaller size for finer grain */
   background-repeat: repeat;
-  background-blend-mode: overlay;
-  /* Overlay blend mode for subtle texture */
   opacity: 0.15;
-  /* Low opacity for subtlety */
+  background-blend-mode: overlay;
 }
 
 html[data-theme="dark"] .paper-texture::before {
@@ -108,7 +106,7 @@ html[data-theme="dark"] .paper-texture::before {
      but often the same noise works well with just lower opacity 
      or different blending against dark backgrounds. 
      Let's style it for dark mode. */
-  opacity: 0.1;
+  opacity: 0.15;
   background-blend-mode: soft-light;
 }
 
