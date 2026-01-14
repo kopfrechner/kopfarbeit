@@ -136,7 +136,23 @@ const structuredData = {
     <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body>
-    <slot />
+    <!-- Background Layers -->
+    <div class="bg-grain"></div>
+    <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+      <!-- Illustration Placeholders -->
+      <div
+        class="absolute top-20 -left-10 size-40 rounded-full bg-accent/20 blur-3xl"
+      >
+      </div>
+      <div
+        class="absolute -right-10 bottom-20 size-60 rounded-full bg-accent/20 blur-3xl"
+      >
+      </div>
+    </div>
+
+    <div class="relative z-10 flex min-h-svh flex-col">
+      <slot />
+    </div>
   </body>
 </html>
 
