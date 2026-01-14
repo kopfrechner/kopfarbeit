@@ -13,13 +13,18 @@ const { variant: Heading = "h2", id, data, filePath } = Astro.props;
 const { title, description, ...props } = data;
 ---
 
-<li class="my-6">
+<li
+  class:list={[
+    "my-6 bg-card-bg p-6 shadow-neo border-neo",
+    "rounded-tl-md rounded-tr-sm rounded-br-md rounded-bl-sm",
+    "transition-all duration-200 ease-out",
+    "hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_#000]",
+  ]}
+>
   <a
     href={getPath(id, filePath)}
     class:list={[
-      "inline-block text-lg font-medium text-accent",
-      "decoration-dashed underline-offset-4 hover:underline",
-      "focus-visible:no-underline focus-visible:underline-offset-0",
+      "inline-block text-lg font-medium text-accent decoration-dashed underline-offset-4 hover:underline focus-visible:no-underline focus-visible:underline-offset-0",
     ]}
   >
     <Heading style={{ viewTransitionName: slugifyStr(title) }}>
