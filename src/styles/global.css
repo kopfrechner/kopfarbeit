@@ -97,8 +97,8 @@ html[data-theme="dark"] {
   background-size: 100px 100px;
   /* Smaller size for finer grain */
   background-repeat: repeat;
-  opacity: 0.15;
-  background-blend-mode: overlay;
+  opacity: 0.45;
+  background-blend-mode: multiply;
 }
 
 html[data-theme="dark"] .paper-texture::before {
