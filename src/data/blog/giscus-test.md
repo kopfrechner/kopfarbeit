@@ -4,7 +4,7 @@ pubDatetime: 2026-01-06T11:25:00Z
 title: Giscus Integration Test
 slug: giscus-integration-test
 featured: true
-draft: false
+draft: true
 tags:
   - test
   - giscus
