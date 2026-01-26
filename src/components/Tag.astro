@@ -1,5 +1,6 @@
 ---
 import IconHash from "@/assets/icons/IconHash.svg";
+import LinkButton from "./LinkButton.astro";
 
 type Props = {
   tag: string;
@@ -11,18 +12,7 @@ const { tag, tagName, size = "lg" } = Astro.props;
 ---
 
 <li>
-  <a
-    href={`/tags/${tag}/`}
-    transition:name={tag}
-    class:list={[
-      "flex items-center gap-0.5",
-      "border-b-2 border-dashed border-foreground",
-      "hover:-mt-0.5 hover:border-accent hover:text-accent",
-      "focus-visible:border-none focus-visible:text-accent",
-      { "text-sm": size === "sm" },
-      { "text-lg": size === "lg" },
-    ]}
-  >
+  <LinkButton href={`/tags/${tag}/`}>
     <IconHash
       class:list={[
         "opacity-80",
@@ -31,5 +21,5 @@ const { tag, tagName, size = "lg" } = Astro.props;
       ]}
     />
     {tagName}
-  </a>
+  </LinkButton>
 </li>
