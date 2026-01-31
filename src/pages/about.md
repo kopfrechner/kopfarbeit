@@ -3,33 +3,14 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-Welcome. You’ve stumbled upon my digital garden — a collection of thoughts, discoveries, and the continuous evolution of my understanding of technology.
+Welcome to my digital playground. This is where I document my thoughts, discoveries, and the things I build.
 
-![Banner Image](/about-banner.webp)
+Primarily, this blog serves as a personal log of my learning journey. I share it here in the hope that it might be useful or interesting to others.
 
-This blog is, first and foremost, a documentation for myself. It is a log of things I learn, things I build, and things that fascinate me. But as with all knowledge, it gains value when shared. So, I’m sharing it here, hoping that some of it resonates with you or helps you on your own path.
-
-## The Journey
+## Background
 
 <img src="/profile.webp" class="sm:float-right sm:w-1/3 sm:ml-4 rounded-md mb-4" alt="Christoph Kopf" />
 
-My journey is rooted in a deep curiosity about how things work, specifically in the realm of **Software Engineering**. I view engineering not just as code, but as a discipline of problem-solving, crafting, and refining.
+I live in **Linz**, Austria, and studied **Software Engineering** at **FH Hagenberg** (Bachelor and Master), graduating in 2012. My career started in research, working on **3D image processing** and real-time reconstruction, until I discovered web engineering. **.NET** has been my main companion for years, though I've recently ventured into **Kotlin** and **Spring**. Currently, my curiosity drives me to explore how **AI** is shaping the future of software engineering.
 
-I am driven by the principles of **Agile Methodologies** — not just as processes, but as a mindset of adaptability and continuous improvement. My technical foundation is built on **.NET**, but my explorations extend far beyond specific frameworks into the broader landscape of **Distributed Architectures**, **Practices**, and **Paradigms**.
-
-## Continuous Evolution
-
-Technology never stands still, and neither do I.
-
-I am deeply interested in how **Artificial Intelligence** is reshaping the landscape of engineering—transforming how we build, secure, and interact with software. It’s not just about the hype; it’s about the practical application of **Engineering with AI** to solve real problems.
-
-Recently, the critical realm of **Security** has also captured my interest. As systems become more complex and distributed, understanding the nuances of securing them is becoming a fundamental part of my work.
-
-## What You'll Find Here
-
-This is a space for:
-*   **Tech**: Deep dives into code, architecture, and emerging tools.
-*   **People**: Reflections on the human side of engineering and collaboration.
-*   **Processes**: Thoughts on how we work, improve, and deliver value.
-
-Thank you for visiting.
+Thanks for stopping by.
