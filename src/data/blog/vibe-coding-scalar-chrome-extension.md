@@ -2,7 +2,6 @@
 author: Christoph Kopf
 pubDatetime: 2026-01-31T12:00:00Z
 title: Vibe Coding a OpenAPI Viewer Chrome Extension
-slug: vibe-coding-scalar-chrome-extension
 featured: true
 draft: false
 tags:

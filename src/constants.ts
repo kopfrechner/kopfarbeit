@@ -1,6 +1,5 @@
 import type { Props } from "astro";
 import type { GiscusProps } from "@giscus/react";
-import IconMail from "@/assets/icons/IconMail.svg";
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconBrandX from "@/assets/icons/IconBrandX.svg";
 import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
