@@ -5,10 +5,12 @@ import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconBrandX from "@/assets/icons/IconBrandX.svg";
 import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
 import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
-import IconFacebook from "@/assets/icons/IconFacebook.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
-import IconPinterest from "@/assets/icons/IconPinterest.svg";
 import IconRss from "@/assets/icons/IconRss.svg";
+import IconBluesky from "@/assets/icons/IconBluesky.svg";
+import IconMastodon from "@/assets/icons/IconMastodon.svg";
+import IconReddit from "@/assets/icons/IconReddit.svg";
+import IconSignal from "@/assets/icons/IconSignal.svg";
 import { SITE } from "@/config";
 
 interface Social {
@@ -47,10 +49,10 @@ export const SHARE_LINKS: Social[] = [
     icon: IconWhatsapp,
   },
   {
-    name: "Facebook",
-    href: "https://www.facebook.com/sharer.php?u=",
-    linkTitle: `Share this post on Facebook`,
-    icon: IconFacebook,
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/sharing/share-offsite/?url=",
+    linkTitle: `Share this post on LinkedIn`,
+    icon: IconLinkedin,
   },
   {
     name: "X",
@@ -59,22 +61,34 @@ export const SHARE_LINKS: Social[] = [
     icon: IconBrandX,
   },
   {
+    name: "Bluesky",
+    href: "https://bsky.app/intent/compose?text=",
+    linkTitle: `Share this post on Bluesky`,
+    icon: IconBluesky,
+  },
+  {
+    name: "Mastodon",
+    href: "https://toot.kytta.dev/?text=",
+    linkTitle: `Share this post on Mastodon`,
+    icon: IconMastodon,
+  },
+  {
+    name: "Reddit",
+    href: "https://www.reddit.com/submit?url=",
+    linkTitle: `Share this post on Reddit`,
+    icon: IconReddit,
+  },
+  {
     name: "Telegram",
     href: "https://t.me/share/url?url=",
     linkTitle: `Share this post via Telegram`,
     icon: IconTelegram,
   },
   {
-    name: "Pinterest",
-    href: "https://pinterest.com/pin/create/button/?url=",
-    linkTitle: `Share this post on Pinterest`,
-    icon: IconPinterest,
-  },
-  {
-    name: "Mail",
-    href: "mailto:?subject=See%20this%20post&body=",
-    linkTitle: `Share this post via email`,
-    icon: IconMail,
+    name: "Signal",
+    href: "signal://send?text=",
+    linkTitle: `Share this post via Signal`,
+    icon: IconSignal,
   },
 ] as const;
 
