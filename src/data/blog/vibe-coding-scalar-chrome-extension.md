@@ -1,7 +1,7 @@
 ---
 author: Christoph Kopf
 pubDatetime: 2026-01-31T12:00:00Z
-title: Vibe Coding a OpenAPI Viewer Chrome Extension
+title: Vibe Coding an OpenAPI Viewer Chrome Extension
 featured: true
 draft: false
 tags:
@@ -69,7 +69,7 @@ Initially, I requested `<all_urls>` permission because I wanted the extension to
 
 ## The Store Experience
 
-I just wanted to contribute and make this accessible for others, so I paid the **$5 registration fee** for the Chrome Web Store.
+I just wanted to contribute and make this accessible for others, so I was a bit surpriced that you have to pay **$5 registration fee** for the Chrome Web Store.
 
 Then came the submission process.
 
@@ -79,6 +79,8 @@ Then came the submission process.
 
 ## Conclusion
 
-It was a fun experiment in AI-assisted development. I went from "zero knowledge" to a "submitted extension" in a single session.
+It was a fun experiment in AI-assisted development. We went from `git init` to the final commit in exactly **161 minutes** (about 2 hours and 41 minutes). 
+
+In that single session, we moved from zero knowledge to a fully functional, branded, and automated Chrome Extension—complete with CI/CD, documentation, and a privacy policy!
 
 Now I am waiting for Google to review it. If you want to build your own or sideload it while I wait, check out the [repository](https://github.com/kopfrechner/scalar-chrome-extension).
