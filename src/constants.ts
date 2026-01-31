@@ -43,18 +43,6 @@ export const SOCIALS: Social[] = [
 
 export const SHARE_LINKS: Social[] = [
   {
-    name: "WhatsApp",
-    href: "https://wa.me/?text=",
-    linkTitle: `Share this post via WhatsApp`,
-    icon: IconWhatsapp,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/sharing/share-offsite/?url=",
-    linkTitle: `Share this post on LinkedIn`,
-    icon: IconLinkedin,
-  },
-  {
     name: "X",
     href: "https://x.com/intent/post?url=",
     linkTitle: `Share this post on X`,
@@ -77,6 +65,18 @@ export const SHARE_LINKS: Social[] = [
     href: "https://www.reddit.com/submit?url=",
     linkTitle: `Share this post on Reddit`,
     icon: IconReddit,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/sharing/share-offsite/?url=",
+    linkTitle: `Share this post on LinkedIn`,
+    icon: IconLinkedin,
+  },
+  {
+    name: "WhatsApp",
+    href: "https://wa.me/?text=",
+    linkTitle: `Share this post via WhatsApp`,
+    icon: IconWhatsapp,
   },
   {
     name: "Telegram",
