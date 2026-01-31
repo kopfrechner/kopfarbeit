@@ -20,7 +20,8 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
     class:list={[
       "py-6 sm:py-4",
       "border-t border-border",
-      "flex flex-col items-center justify-between sm:flex-row-reverse",
+      "flex flex-col items-center justify-center sm:flex-row sm:gap-x-4",
+      "text-sm",
     ]}
   >
     <Socials />
@@ -43,7 +44,7 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
           target="_blank"
           rel="noopener noreferrer">Paper</LinkButton
         >
-        and <span class="text-red-500">❤️</span>
+        and <span class="text-red-500">💜</span>
       </span>
     </div>
   </div>
