@@ -26,26 +26,12 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
         Welcome to KopfarbeIT
       </h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="inline-block"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
-        />
-        <span class="sr-only">RSS Feed</span>
-      </a>
 
       <p>
         A space for thoughts, code, and discoveries. Explore my latest posts on
         software engineering, AI, and more.
       </p>
-      <p class="mt-2">
+      <p class="mt-4">
         Read the blog posts or check
         <LinkButton href="/about/">ABOUT</LinkButton>
         to learn more.

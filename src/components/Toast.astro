@@ -1,0 +1,64 @@
+---
+---
+
+<div
+  id="toast-container"
+  class="pointer-events-none fixed bottom-4 right-4 z-50 flex flex-col gap-2"
+>
+</div>
+
+<template id="toast-template">
+  <div
+    class="toast z-50 translate-y-4 transform border-2 border-border bg-accent px-4 py-2 text-white shadow-neo opacity-0 transition-all duration-300"
+  >
+    <span class="toast-message"></span>
+  </div>
+</template>
+
+<script>
+  function initToast() {
+    const container = document.getElementById("toast-container");
+    const template = document.getElementById(
+      "toast-template"
+    ) as HTMLTemplateElement;
+
+    if (!container || !template) return;
+
+    window.addEventListener("toast", ((e: CustomEvent) => {
+      const { message, x, y } = e.detail;
+      const clone = template.content.cloneNode(true) as DocumentFragment;
+      const toastEl = clone.querySelector(".toast") as HTMLElement;
+      const messageEl = toastEl.querySelector(".toast-message");
+
+      if (messageEl) messageEl.textContent = message;
+
+      if (x !== undefined && y !== undefined) {
+        toastEl.style.position = "fixed";
+        toastEl.style.left = `${x}px`;
+        toastEl.style.top = `${y - 12}px`; // Position slightly above the point
+        toastEl.style.transform = "translate(-50%, -100%)";
+        toastEl.classList.remove("translate-y-4"); // Remove default animation class
+        document.body.appendChild(toastEl);
+      } else {
+        container.appendChild(toastEl);
+      }
+
+      // Trigger animation
+      requestAnimationFrame(() => {
+        toastEl.classList.add("opacity-100");
+        if (x === undefined) toastEl.classList.remove("translate-y-4");
+      });
+
+      // Remove after delay
+      setTimeout(() => {
+        toastEl.classList.remove("opacity-100");
+        toastEl.classList.add("opacity-0");
+        setTimeout(() => {
+          toastEl.remove();
+        }, 300);
+      }, 3000);
+    }) as EventListener);
+  }
+
+  document.addEventListener("astro:page-load", initToast);
+</script>

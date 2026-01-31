@@ -8,6 +8,7 @@ import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 import IconFacebook from "@/assets/icons/IconFacebook.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
+import IconRss from "@/assets/icons/IconRss.svg";
 import { SITE } from "@/config";
 
 interface Social {
@@ -29,6 +30,12 @@ export const SOCIALS: Social[] = [
     href: "https://www.linkedin.com/in/christoph-kopf-9b7a74b2",
     linkTitle: `${SITE.title} on LinkedIn`,
     icon: IconLinkedin,
+  },
+  {
+    name: "RSS",
+    href: "/rss.xml",
+    linkTitle: `${SITE.title} RSS Feed`,
+    icon: IconRss,
   },
 ] as const;
 
