@@ -12,7 +12,7 @@ tags:
 description: How I built a Scalar OpenAPI Viewer Chrome extension using Gemini CLI, navigated the Manifest V3 sandbox, and faced the Google Web Store review process.
 ---
 
-Today I "vibe coded" a simple Google Chrome extension. It was my first time building one, and I did it without even really knowing how they work under the hood.
+Today I "vibe coded" a simple [Google Chrome extension](https://chromewebstore.google.com/detail/enljnjkaijiflghcdkhgoimoeecifbdh). It was my first time building one, and I did it without even really knowing how they work under the hood.
 
 I used the **Gemini CLI** and VS Code to create **Scalar OpenAPI Viewer**, a tool to render OpenAPI/Swagger files beautifully using [Scalar](https://scalar.com/). The project is open source and located here: [Scalar Chrome Extension](https://github.com/kopfrechner/scalar-chrome-extension).
 
