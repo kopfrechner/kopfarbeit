@@ -17,6 +17,7 @@
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^3.7.0",
     "@giscus/react": "^3.1.0",
+    "@pagefind/default-ui": "^1.4.0",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^19.2.10",
@@ -24,7 +25,6 @@
     "astro": "^5.17.1",
     "dayjs": "^1.11.19",
     "lodash.kebabcase": "^4.1.1",
-    "pagefind": "^1.4.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "rehype-external-links": "^3.0.0",
@@ -36,7 +36,6 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
-    "@pagefind/default-ui": "^1.4.0",
     "@shikijs/transformers": "^3.22.0",
     "@tailwindcss/typography": "^0.5.19",
     "@types/lodash.kebabcase": "^4.1.9",
