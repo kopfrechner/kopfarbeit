@@ -2,7 +2,7 @@ export const SITE = {
   website: "https://kopfarbeit.dev", // replace this with your deployed domain
   author: "Christoph Kopf",
   profile: "https://www.linkedin.com/in/christoph-kopf-9b7a74b2",
-  desc: "KopfarbeIT: A deep dive into the .NET ecosystem and modern software engineering. Join Christoph Kopf as he explores new technologies, shares coding insights, and documents the journey of a passionate engineer.",
+  desc: "KopfarbeIT: A digital logbook for documenting thoughts, discoveries, and the journey of building software. A personal log of learning experiences, from Software Engineering to the future of AI-driven engineering.",
   title: "KopfarbeIT",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
