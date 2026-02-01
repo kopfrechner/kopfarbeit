@@ -8,7 +8,6 @@ Disallow: /tags
 Disallow: /archives
 
 Sitemap: ${sitemapURL.href}
-llms: ${siteURL}llms.txt
 `;
 
 export const GET: APIRoute = ({ site }) => {
