@@ -93,7 +93,9 @@ const nextPost =
     class:list={["app-layout pb-12", { "mt-8": !SITE.showBackButton }]}
     data-pagefind-body
   >
-    <div class="rounded-md bg-card-bg p-4 shadow-neo border-neo">
+    <div
+      class="rounded-md bg-card-bg p-4 shadow-neo border-neo max-sm:mx-[-1rem] max-sm:rounded-none max-sm:shadow-none"
+    >
       {
         archived && (
           <div class="border-skin-accent text-skin-base bg-skin-card/50 mb-6 rounded-lg border border-dashed p-4">
