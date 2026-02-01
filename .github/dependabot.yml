@@ -1,0 +1,32 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 3
+    groups:
+      astro:
+        patterns:
+          - "astro"
+          - "@astrojs/*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+          - "@giscus/react"
+      tailwind:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+      linting:
+        patterns:
+          - "eslint"
+          - "eslint-plugin-astro"
+          - "@typescript-eslint/*"
+          - "prettier"
+          - "prettier-plugin-*"
+    open-pull-requests-limit: 10
