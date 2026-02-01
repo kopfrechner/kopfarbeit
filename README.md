@@ -25,7 +25,6 @@ This blog is built using a customized version of the [AstroPaper](https://github
 
 ## 🚀 Recent Achievements
 
-- **Vibe Coding Success**: Built and submitted a fully functional Chrome Extension (Scalar OpenAPI Viewer) in exactly **161 minutes**.
 - **Performance**: Maintaining a near-perfect Lighthouse score for accessibility, SEO, and performance.
 - **Automation**: Integrated CI/CD pipelines for automated builds and Pagefind indexing.
 
