@@ -149,6 +149,9 @@ const isActive = (path: string) => {
 </header>
 
 <script>
+  // Global declaration for the external Typewriter library loaded via CDN
+  declare const Typewriter: any;
+
   function initNav() {
     const menuBtn = document.querySelector("#menu-btn");
     const menuItems = document.querySelector("#menu-items");
@@ -175,7 +178,6 @@ const isActive = (path: string) => {
   function initTypewriter() {
     const container = document.querySelector("#typewriter-title");
     if (container && typeof Typewriter !== "undefined") {
-      // @ts-ignore
       new Typewriter(container, {
         loop: false,
         cursor: "_",
