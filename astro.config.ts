@@ -14,15 +14,39 @@ import { SITE } from "./src/config";
 
 import react from "@astrojs/react";
 
+import { fileURLToPath } from "node:url";
+import { execSync } from "node:child_process";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  integrations: [sitemap({
-    filter: page =>
-      (SITE.showArchives || !page.endsWith("/archives")) &&
-      !page.includes("/search") &&
-      !page.includes("/tags"),
-  }), react()],
+  integrations: [
+    sitemap({
+      filter: page =>
+        (SITE.showArchives || !page.endsWith("/archives")) &&
+        !page.includes("/search") &&
+        !page.includes("/tags"),
+    }),
+    react(),
+    {
+      name: "pagefind",
+      hooks: {
+        "astro:build:done": ({ dir }) => {
+          const targetDir = fileURLToPath(dir);
+          try {
+            console.log("Running pagefind...");
+            execSync(`npx pagefind --site "${targetDir}"`, {
+              stdio: "inherit",
+              timeout: 60000,
+            });
+          } catch (e) {
+            console.error("Pagefind failed to run.");
+            console.error(e);
+          }
+        },
+      },
+    },
+  ],
   markdown: {
     remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
     rehypePlugins: [
