@@ -20,7 +20,7 @@ const backUrl = SITE.showBackButton ? Astro.url.pathname : "/";
 <main data-backUrl={backUrl} id="main-content" class="app-layout pb-4">
   {
     singleCard ? (
-      <div class="rounded-md bg-card-bg p-4 shadow-neo border-neo">
+      <div class="rounded-md bg-card-bg-secondary p-4 shadow-neo border-neo">
         {"titleTransition" in props ? (
           <h1 class="text-2xl font-semibold sm:text-3xl">
             {props.pageTitle[0]}
@@ -36,7 +36,7 @@ const backUrl = SITE.showBackButton ? Astro.url.pathname : "/";
       </div>
     ) : (
       <>
-        <div class="rounded-md bg-card-bg p-4 shadow-neo border-neo">
+        <div class="rounded-md bg-card-bg-secondary p-4 shadow-neo border-neo">
           {"titleTransition" in props ? (
             <h1 class="text-2xl font-semibold sm:text-3xl">
               {props.pageTitle[0]}
