@@ -2,6 +2,8 @@
 import type { HTMLAttributes } from "astro/types";
 import Socials from "./Socials.astro";
 import LinkButton from "./LinkButton.astro";
+import { Image } from "astro:assets";
+import euFlag from "@/assets/images/eu-flag.svg";
 
 const currentYear = new Date().getFullYear();
 
@@ -35,7 +37,12 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
 
       <span class="hidden lg:inline">|</span>
 
-      <div class="flex flex-col items-center md:flex-row md:gap-x-2">
+      <div class="flex flex-col-reverse items-center md:flex-row md:gap-x-2">
+        <span class="flex items-center gap-1">
+          <Image src={euFlag} alt="EU Flag" class="inline-block h-auto w-7" />
+          EU hosted
+        </span>
+        <span class="hidden md:inline">|</span>
         <span>
           Made with
           <LinkButton
@@ -50,8 +57,6 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
           >
           and <span class="text-red-500">💜</span>
         </span>
-        <span class="hidden md:inline">|</span>
-        <span>Hosted in <span class="text-xl">🇪🇺</span></span>
       </div>
     </div>
   </div>
