@@ -25,26 +25,34 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
   >
     <Socials />
     <div
-      class="my-2 flex flex-col items-center md:flex-row md:justify-center md:gap-x-2 md:whitespace-nowrap"
+      class="my-2 flex flex-col items-center lg:flex-row lg:justify-center lg:gap-x-2 lg:whitespace-nowrap"
     >
-      <span>Copyright &#169; {currentYear}</span>
-      <span class="hidden md:inline">|</span>
-      <span>All rights reserved</span>
-      <span class="hidden md:inline">|</span>
-      <span>
-        Made with
-        <LinkButton
-          href="https://github.com/withastro/astro"
-          target="_blank"
-          rel="noopener noreferrer">Astro</LinkButton
-        >
-        <LinkButton
-          href="https://github.com/satnaing/astro-paper"
-          target="_blank"
-          rel="noopener noreferrer">Paper</LinkButton
-        >
-        and <span class="text-red-500">💜</span>
-      </span>
+      <div class="flex flex-col items-center md:flex-row md:gap-x-2">
+        <span>Copyright &#169; {currentYear}</span>
+        <span class="hidden md:inline">|</span>
+        <span>All rights reserved</span>
+      </div>
+
+      <span class="hidden lg:inline">|</span>
+
+      <div class="flex flex-col items-center md:flex-row md:gap-x-2">
+        <span>
+          Made with
+          <LinkButton
+            href="https://github.com/withastro/astro"
+            target="_blank"
+            rel="noopener noreferrer">Astro</LinkButton
+          >
+          <LinkButton
+            href="https://github.com/satnaing/astro-paper"
+            target="_blank"
+            rel="noopener noreferrer">Paper</LinkButton
+          >
+          and <span class="text-red-500">💜</span>
+        </span>
+        <span class="hidden md:inline">|</span>
+        <span>Hosted in <span class="text-xl">🇪🇺</span></span>
+      </div>
     </div>
   </div>
 </footer>
