@@ -1,4 +1,4 @@
---- 
+---
 import IconX from "@/assets/icons/IconX.svg";
 import IconMoon from "@/assets/icons/IconMoon.svg";
 import IconSearch from "@/assets/icons/IconSearch.svg";
@@ -22,7 +22,8 @@ const isActive = (path: string) => {
 };
 ---
 
-<script is:inline src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script is:inline src="https://unpkg.com/typewriter-effect@latest/dist/core.js"
+></script>
 
 <a
   id="skip-to-content"
@@ -49,7 +50,10 @@ const isActive = (path: string) => {
       href="/"
       class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
     >
-      <span id="typewriter-title" class="font-mono">> {SITE.title}_</span>
+      <span class="font-mono text-accent">&gt; </span><span
+        id="typewriter-title"
+        class="font-mono">{SITE.title}<span class="text-accent">_</span></span
+      >
     </a>
     <nav
       id="nav-menu"
@@ -156,7 +160,10 @@ const isActive = (path: string) => {
         const openMenu = menuBtn.getAttribute("aria-expanded") === "true";
 
         menuBtn.setAttribute("aria-expanded", openMenu ? "false" : "true");
-        menuBtn.setAttribute("aria-label", openMenu ? "Open Menu" : "Close Menu");
+        menuBtn.setAttribute(
+          "aria-label",
+          openMenu ? "Open Menu" : "Close Menu"
+        );
 
         menuItems.classList.toggle("hidden");
         menuIcon.classList.toggle("hidden");
@@ -175,7 +182,7 @@ const isActive = (path: string) => {
         delay: 75,
       })
         .deleteAll(0)
-        .typeString("> KIT")
+        .typeString("KIT")
         .pauseFor(2000)
         .deleteChars(2)
         .pauseFor(1000)
@@ -191,3 +198,9 @@ const isActive = (path: string) => {
   initNav();
   document.addEventListener("astro:after-swap", initNav);
 </script>
+
+<style is:global>
+  .Typewriter__cursor {
+    color: var(--accent);
+  }
+</style>
