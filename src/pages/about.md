@@ -1,11 +1,10 @@
 ---
 layout: ../layouts/AboutLayout.astro
 title: "About"
+description: "Welcome to my digital logbook. This is where I document my thoughts, discoveries, and the things I build. Primarily, this blog serves as a personal log of my learning journey. I share it here in the hope that it might be useful or interesting to others."
 ---
 
-Welcome to my digital logbook. This is where I document my thoughts, discoveries, and the things I build.
 
-Primarily, this blog serves as a personal log of my learning journey. I share it here in the hope that it might be useful or interesting to others.
 
 ## Background
 
