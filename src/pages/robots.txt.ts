@@ -5,7 +5,6 @@ User-agent: *
 Allow: /
 Disallow: /search
 Disallow: /tags
-Disallow: /archives
 
 Sitemap: ${sitemapURL.href}
 `;
