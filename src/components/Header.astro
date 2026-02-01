@@ -1,4 +1,4 @@
----
+--- 
 import IconX from "@/assets/icons/IconX.svg";
 import IconMoon from "@/assets/icons/IconMoon.svg";
 import IconSearch from "@/assets/icons/IconSearch.svg";
@@ -21,6 +21,8 @@ const isActive = (path: string) => {
   return currentPath === path || currentPathArray[0] === pathArray[0];
 };
 ---
+
+<script is:inline src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
 <a
   id="skip-to-content"
@@ -47,7 +49,7 @@ const isActive = (path: string) => {
       href="/"
       class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
     >
-      {SITE.title}
+      <span id="typewriter-title" class="font-mono">> {SITE.title}_</span>
     </a>
     <nav
       id="nav-menu"
@@ -143,28 +145,49 @@ const isActive = (path: string) => {
 </header>
 
 <script>
-  function toggleNav() {
+  function initNav() {
     const menuBtn = document.querySelector("#menu-btn");
     const menuItems = document.querySelector("#menu-items");
     const menuIcon = document.querySelector("#menu-icon");
     const closeIcon = document.querySelector("#close-icon");
 
-    if (!menuBtn || !menuItems || !menuIcon || !closeIcon) return;
+    if (menuBtn && menuItems && menuIcon && closeIcon) {
+      menuBtn.addEventListener("click", () => {
+        const openMenu = menuBtn.getAttribute("aria-expanded") === "true";
 
-    menuBtn.addEventListener("click", () => {
-      const openMenu = menuBtn.getAttribute("aria-expanded") === "true";
+        menuBtn.setAttribute("aria-expanded", openMenu ? "false" : "true");
+        menuBtn.setAttribute("aria-label", openMenu ? "Open Menu" : "Close Menu");
 
-      menuBtn.setAttribute("aria-expanded", openMenu ? "false" : "true");
-      menuBtn.setAttribute("aria-label", openMenu ? "Open Menu" : "Close Menu");
-
-      menuItems.classList.toggle("hidden");
-      menuIcon.classList.toggle("hidden");
-      closeIcon.classList.toggle("hidden");
-    });
+        menuItems.classList.toggle("hidden");
+        menuIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+    }
   }
 
-  toggleNav();
+  function initTypewriter() {
+    const container = document.querySelector("#typewriter-title");
+    if (container && typeof Typewriter !== "undefined") {
+      // @ts-ignore
+      new Typewriter(container, {
+        loop: false,
+        cursor: "_",
+        delay: 75,
+      })
+        .deleteAll(0)
+        .typeString("> KIT")
+        .pauseFor(2000)
+        .deleteChars(2)
+        .pauseFor(1000)
+        .typeString("opfarbeIT")
+        .start();
+    }
+  }
 
-  // Runs on view transitions navigation
-  document.addEventListener("astro:after-swap", toggleNav);
+  // Animate only on first entry
+  initTypewriter();
+
+  // Initialize nav on entry and on every view transition
+  initNav();
+  document.addEventListener("astro:after-swap", initNav);
 </script>
