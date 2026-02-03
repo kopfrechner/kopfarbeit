@@ -74,7 +74,7 @@ Now I wait. The review process apparently takes weeks, and the worst part is the
 
 ## Thoughts
 
-It was a fun experiment. We went from `git init` to final commit in exactly **161 minutes** (about 2 hours 40 minutes).
+It was a fun experiment. We went from `git init` to submission in Google Chrome Store in exactly **161 minutes** (about 2 hours 40 minutes).
 
 In one session, we went from zero knowledge to a mostly automated, fully functional extension with CI/CD and a privacy policy.
 
