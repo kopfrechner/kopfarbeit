@@ -139,16 +139,20 @@ const structuredData = {
   </head>
   <body class="paper-texture">
     <!-- Background Layers -->
-    <img
-      src="/images/bg-left.webp"
-      alt=""
-      class="pointer-events-none fixed bottom-30 left-0 -z-10 hidden max-h-[44vh] w-auto select-none min-[200px]:block"
-    />
-    <img
-      src="/images/bg-right.webp"
-      alt=""
-      class="pointer-events-none fixed top-30 right-0 -z-10 hidden max-h-[37vh] w-auto select-none min-[200px]:block"
-    />
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 h-[100lvh] w-full overflow-hidden select-none"
+    >
+      <img
+        src="/images/bg-left.webp"
+        alt=""
+        class="absolute bottom-30 left-0 hidden max-h-[35%] w-auto min-[200px]:block"
+      />
+      <img
+        src="/images/bg-right.webp"
+        alt=""
+        class="absolute top-30 right-0 hidden max-h-[30%] w-auto min-[200px]:block"
+      />
+    </div>
 
     <div class="relative z-10 flex min-h-svh flex-col">
       <slot />
