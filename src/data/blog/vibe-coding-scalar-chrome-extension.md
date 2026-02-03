@@ -12,33 +12,31 @@ tags:
 description: How I built a Scalar OpenAPI Viewer Chrome extension using Gemini CLI, navigated the Manifest V3 sandbox, and faced the Google Web Store review process.
 ---
 
-Today I "vibe coded" a simple [Google Chrome extension](https://chromewebstore.google.com/detail/enljnjkaijiflghcdkhgoimoeecifbdh). It was my first time building one, and I did it without even really knowing how they work under the hood.
+Today I "vibe coded" a simple [Google Chrome extension](https://chromewebstore.google.com/detail/enljnjkaijiflghcdkhgoimoeecifbdh). It was my first time building one, and I didn't even read the documentation.
 
-I used the **Gemini CLI** and VS Code to create **Scalar OpenAPI Viewer**, a tool to render OpenAPI/Swagger files beautifully using [Scalar](https://scalar.com/). The project is open source and located here: [Scalar Chrome Extension](https://github.com/kopfrechner/scalar-chrome-extension).
+I used the **Gemini CLI** and VS Code to create **Scalar OpenAPI Viewer**, a tool to render OpenAPI/Swagger files beautifully using [Scalar](https://scalar.com/). The project is open source: [Scalar Chrome Extension](https://github.com/kopfrechner/scalar-chrome-extension).
 
-The problem was simple: I regularly face raw OpenAPI spec files (JSON or YAML) without a proper editor or Swagger UI handy. I wanted to solve this pain point with a simple, private developer tool.
+The problem was simple: I often hit raw OpenAPI spec files (JSON or YAML) and don't have a proper editor or Swagger UI handy. I wanted a simple, private developer tool to fix that.
 
-## The Process: "Vibe Coding"
+## The Process
 
-I started with a vague idea and let the AI guide me. I didn't read the Chrome Extension documentation first; I just asked Gemini to help me scaffold the project. We hit walls, we broke things, and we fixed them. That's the essence of "vibe coding"—iterating fast with an intelligent assistant until the software matches the vibe you're going for.
+I started with a vague idea and let the AI drive. I didn't verify permissions or read up on Manifest V3; I just asked Gemini to scaffold the project. We hit walls, broke things, and fixed them. That's "vibe coding" to me—iterating fast with an assistant until the software feels right. Though, i review all changes and want to get a feeling of how the code is working under the hood. 
 
-## Technical Challenges
+## Technical Hurdles
 
-Looking back at the [git history](https://github.com/kopfrechner/scalar-chrome-extension/commits/main/), you can see the specific hurdles we jumped.
+My [git history](https://github.com/kopfrechner/scalar-chrome-extension/commits/main/) shows exactly where we tripped up.
 
-### 1. The Sandbox & CDN Dilemma
+### 1. The Sandbox
 
-I wanted to use the Scalar API Reference library. My first instinct was to just load the JS files from a CDN.
+I wanted to use the Scalar API Reference library, so my first instinct was to just load the JS from a CDN. Chrome's Manifest V3 blocked that immediately. The Content Security Policy is strict for extension pages.
 
-- **The Block:** Chrome's Manifest V3 has a strict Content Security Policy (CSP) that blocks external scripts in standard extension pages.
-- **The Fix:** We had to move the viewer logic to a "Sandboxed" page (`viewer.html`). This allows us to run scripts that would otherwise be blocked, but it isolates them from the rest of the extension's privileges.
+To get around it, we moved the viewer logic to a "Sandboxed" page (`viewer.html`). This isolates the scripts from the rest of the extension's privileges but allows them to run.
 
 ### 2. The `localStorage` Crash
 
-Once we got the CDN working in the sandbox, the Scalar library immediately crashed.
+Once the CDN was working, Scalar crashed anyway. It ignores the sandbox context and tries to access `window.localStorage` to save user preferences (like light/dark mode). In a null-origin sandboxed iframe, that throws a `SecurityError`.
 
-- **The Bug:** Scalar tries to access `window.localStorage` to save user preferences (like light/dark mode). In a null-origin sandboxed iframe, accessing `localStorage` throws a `SecurityError`.
-- **The Fix:** We had to implement an in-memory mock to satisfy the library.
+We had to code an in-memory mock to shut it up:
 
 ```javascript
 // viewer.js
@@ -62,25 +60,22 @@ try {
 
 ### 3. Permission Anxiety
 
-Initially, I requested `<all_urls>` permission because I wanted the extension to work on any page.
+I initially asked for `<all_urls>` permission so the extension would work on any page. Google creates a terrifying warning for users when you do that.
 
-- **The Warning:** Google creates a scary warning for users and reviewers when you ask for broad access.
-- **The Pivot:** We switched to `activeTab`. This is much friendlier—it only grants access to the _current_ tab when the user explicitly clicks the extension icon. It’s better for privacy and (hopefully) speeds up the review.
+I switched to `activeTab` instead. It only grants access to the *current* tab when you explicitly click the icon. It's better for privacy and (hopefully) speeds up the review.
 
-## The Store Experience
+## The Web Store Experience
 
-I just wanted to contribute and make this accessible for others, so I was a bit surpriced that you have to pay **$5 registration fee** for the Chrome Web Store.
+I just wanted to share this with people, so I was annoyed to find a **$5 registration fee** for the Chrome Web Store.
 
-Then came the submission process.
+The submission process is tedious. Google asks *a lot* of privacy questions. Easy for me—I'm not collecting anything—but still a chore.
 
-1.  **Privacy Questions:** Google asks _a lot_ of questions. In my case, it was easy: **no data is collected at all.** It's purely a client-side tool.
-2.  **The Waiting Game:** It is now in the review process, which can apparently take weeks.
-3.  **The Lock-in:** The most annoying part is that you can't stop the process once triggered. I wanted to release some more changes (like a footer update), but I'm locked out until they finish the review.
+Now I wait. The review process apparently takes weeks, and the worst part is the lock-in. You can't stop or update the submission once it's triggered. I have a footer update ready to go, but I'm locked out until they finish.
 
-## Conclusion
+## Thoughts
 
-It was a fun experiment in AI-assisted development. We went from `git init` to the final commit in exactly **161 minutes** (about 2 hours and 41 minutes). 
+It was a fun experiment. We went from `git init` to final commit in exactly **161 minutes** (about 2 hours 40 minutes).
 
-In that single session, we moved from zero knowledge to a fully functional, branded, and automated Chrome Extension—complete with CI/CD, documentation, and a privacy policy!
+In one session, we went from zero knowledge to a mostly automated, fully functional extension with CI/CD and a privacy policy.
 
-Now I am waiting for Google to review it. If you want to build your own or sideload it while I wait, check out the [repository](https://github.com/kopfrechner/scalar-chrome-extension).
+While I wait for Google, you can grab the code or sideload it yourself from the [repository](https://github.com/kopfrechner/scalar-chrome-extension).
