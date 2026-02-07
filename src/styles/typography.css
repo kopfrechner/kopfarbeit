@@ -1,7 +1,6 @@
 @plugin "@tailwindcss/typography";
 
 @layer base {
-
   h1,
   h2,
   h3,
@@ -9,7 +8,7 @@
   h5,
   h6,
   .brand {
-    font-family: 'Archivo Black', sans-serif;
+    font-family: "Archivo Black", sans-serif;
     text-transform: uppercase;
     letter-spacing: -1px;
   }
@@ -65,7 +64,6 @@
     }
 
     table {
-
       th,
       td {
         @apply border border-border p-2;
@@ -81,7 +79,7 @@
     }
 
     code {
-      @apply bg-fizz/30 text-foreground px-1.5 py-0.5 wrap-break-word font-bold before:content-none after:content-none;
+      @apply bg-fizz/30 px-1.5 py-0.5 font-bold wrap-break-word text-foreground before:content-none after:content-none;
     }
 
     .astro-code code {

@@ -13,44 +13,47 @@ const { class: className } = Astro.props;
   class:list={["inline-block", className]}
 >
   <!-- Outer Rim (Border) -->
-  <circle cx="32" cy="32" r="30" fill="var(--border)" />
-  
+  <circle cx="32" cy="32" r="30" fill="var(--border)"></circle>
+
   <!-- Peel (Zest) -->
-  <circle cx="32" cy="32" r="27" fill="var(--zest)" />
-  
+  <circle cx="32" cy="32" r="27" fill="var(--zest)"></circle>
+
   <!-- Pith (White) -->
-  <circle cx="32" cy="32" r="24" fill="white" />
-  
+  <circle cx="32" cy="32" r="24" fill="white"></circle>
+
   <!-- Segments (The juicy part) -->
   <g fill="var(--zest)">
     <!-- Top -->
-    <path d="M30 10c0 0-8 2-10 10l10 10V10z" />
-    <path d="M34 10c0 0 8 2 10 10L34 30V10z" />
-    
+    <path d="M30 10c0 0-8 2-10 10l10 10V10z"></path>
+    <path d="M34 10c0 0 8 2 10 10L34 30V10z"></path>
+
     <!-- Bottom -->
-    <path d="M30 54c0 0-8-2-10-10l10-10v20z" />
-    <path d="M34 54c0 0 8-2 10-10L34 34v20z" />
-    
+    <path d="M30 54c0 0-8-2-10-10l10-10v20z"></path>
+    <path d="M34 54c0 0 8-2 10-10L34 34v20z"></path>
+
     <!-- Left -->
-    <path d="M10 30c0 0 2-8 10-10l10 10H10z" />
-    <path d="M10 34c0 0 2 8 10 10l10-10H10z" />
-    
+    <path d="M10 30c0 0 2-8 10-10l10 10H10z"></path>
+    <path d="M10 34c0 0 2 8 10 10l10-10H10z"></path>
+
     <!-- Right -->
-    <path d="M54 30c0 0-2-8-10-10L34 30h20z" />
-    <path d="M54 34c0 0-2 8-10 10L34 34h20z" />
+    <path d="M54 30c0 0-2-8-10-10L34 30h20z"></path>
+    <path d="M54 34c0 0-2 8-10 10L34 34h20z"></path>
   </g>
 
   <!-- Center Pith Dot -->
-  <circle cx="32" cy="32" r="3" fill="white" />
-  
+  <circle cx="32" cy="32" r="3" fill="white"></circle>
+
   <!-- Separation lines (White) -->
-  <rect x="31" y="8" width="2" height="48" fill="white" />
-  <rect x="8" y="31" width="48" height="2" fill="white" />
-  <line x1="16" y1="16" x2="48" y2="48" stroke="white" stroke-width="2" />
-  <line x1="48" y1="16" x2="16" y2="48" stroke="white" stroke-width="2" />
+  <rect x="31" y="8" width="2" height="48" fill="white"></rect>
+  <rect x="8" y="31" width="48" height="2" fill="white"></rect>
+  <line x1="16" y1="16" x2="48" y2="48" stroke="white" stroke-width="2"></line>
+  <line x1="48" y1="16" x2="16" y2="48" stroke="white" stroke-width="2"></line>
 
   <!-- Highlights/Glisten -->
-  <rect x="20" y="20" width="4" height="4" fill="white" fill-opacity="0.3" />
-  <rect x="40" y="24" width="3" height="3" fill="white" fill-opacity="0.2" />
-  <rect x="25" y="42" width="2" height="2" fill="white" fill-opacity="0.2" />
+  <rect x="20" y="20" width="4" height="4" fill="white" fill-opacity="0.3"
+  ></rect>
+  <rect x="40" y="24" width="3" height="3" fill="white" fill-opacity="0.2"
+  ></rect>
+  <rect x="25" y="42" width="2" height="2" fill="white" fill-opacity="0.2"
+  ></rect>
 </svg>

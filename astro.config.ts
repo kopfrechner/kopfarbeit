@@ -34,13 +34,16 @@ export default defineConfig({
         "astro:build:done": ({ dir }) => {
           const targetDir = fileURLToPath(dir);
           try {
+            // eslint-disable-next-line no-console
             console.log("Running pagefind...");
             execSync(`npx pagefind --site "${targetDir}"`, {
               stdio: "inherit",
               timeout: 60000,
             });
           } catch (e) {
+            // eslint-disable-next-line no-console
             console.error("Pagefind failed to run.");
+            // eslint-disable-next-line no-console
             console.error(e);
           }
         },

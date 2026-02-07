@@ -94,12 +94,12 @@ const nextPost =
     data-pagefind-body
   >
     <div
-      class="flex flex-col bg-card-bg shadow-neo border-neo max-sm:-mx-3 max-sm:shadow-none"
+      class="flex flex-col border-neo bg-card-bg shadow-neo max-sm:-mx-3 max-sm:shadow-none"
     >
-      <div class="bg-zest p-8 border-b-[3px] border-ink">
+      <div class="border-b-[3px] border-ink bg-zest p-8">
         <h1
           transition:name={slugifyStr(title)}
-          class="text-3xl font-heading uppercase tracking-tighter text-ink sm:text-6xl leading-[0.9]"
+          class="font-heading text-3xl leading-[0.9] tracking-tighter text-ink uppercase sm:text-6xl"
         >
           {title}
         </h1>
@@ -108,8 +108,8 @@ const nextPost =
       <div class="p-8">
         {
           archived && (
-            <div class="mb-8 border-neo shadow-neo bg-card-bg-secondary p-4 border-dashed">
-              <p class="italic font-bold">
+            <div class="mb-8 border-neo border-dashed bg-card-bg-secondary p-4 shadow-neo">
+              <p class="font-bold italic">
                 This post is archived. It is hidden from the main feed but
                 preserved here for reference.
               </p>
@@ -149,7 +149,9 @@ const nextPost =
 
         <EditPost class="sm:hidden" {hideEditPost} {post} />
 
-        <div class="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+        <div
+          class="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between"
+        >
           <BackToTopButton />
           <ShareLinks />
         </div>

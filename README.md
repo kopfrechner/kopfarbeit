@@ -9,6 +9,7 @@ Visit the live site: [sodazitron.dev](https://sodazitron.dev)
 This blog is built using a customized version of the [AstroPaper](https://github.com/satnaing/astro-paper) theme. It serves as both a public portfolio and a personal knowledge base.
 
 ### Key Focus Areas:
+
 - **.NET Ecosystem**: Deep dives into C# and modern software engineering patterns.
 - **Modern Web**: Venturing into Kotlin, Spring, and Astro.
 - **AI-Assisted Development**: Documenting "vibe coding" sessions and AI integration.
@@ -32,14 +33,14 @@ This blog is built using a customized version of the [AstroPaper](https://github
 
 All commands are run from the root of the project:
 
-| Command           | Action                                           |
-| :---------------- | :----------------------------------------------- |
-| `npm install`     | Installs dependencies                            |
-| `npm run dev`     | Starts local dev server at `localhost:4321`      |
-| `npm run build`   | Build the production site and run Pagefind       |
-| `npm run preview` | Preview your build locally                       |
-| `npm run format`  | Format code with Prettier                        |
-| `npm run lint`    | Lint with ESLint                                 |
+| Command           | Action                                      |
+| :---------------- | :------------------------------------------ |
+| `npm install`     | Installs dependencies                       |
+| `npm run dev`     | Starts local dev server at `localhost:4321` |
+| `npm run build`   | Build the production site and run Pagefind  |
+| `npm run preview` | Preview your build locally                  |
+| `npm run format`  | Format code with Prettier                   |
+| `npm run lint`    | Lint with ESLint                            |
 
 ## 📜 License
 

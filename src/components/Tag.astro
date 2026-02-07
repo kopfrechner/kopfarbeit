@@ -1,5 +1,4 @@
 ---
-import IconHash from "@/assets/icons/IconHash.svg";
 import LinkButton from "./LinkButton.astro";
 
 type Props = {
@@ -16,7 +15,7 @@ const { tag, tagName, size = "lg" } = Astro.props;
     href={`/tags/${tag}/`}
     variant="button"
     class:list={[
-      "group relative bg-fizz/30 border-0 shadow-none hover:bg-fizz/50",
+      "group relative border-0 bg-fizz/30 shadow-none hover:bg-fizz/50",
       { "px-2 py-0.5 text-xs": size === "sm" },
       { "px-4 py-1.5 text-base": size === "lg" },
     ]}

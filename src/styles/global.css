@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap'); /* Archivo Black */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap'); /* JetBrains Mono */
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"); /* Archivo Black */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"); /* JetBrains Mono */
 @import "tailwindcss";
 @import "./typography.css";
 
@@ -7,12 +7,12 @@
 
 :root,
 html[data-theme="light"] {
-  --zest: #DAFF00;
-  --fizz: #00F0FF;
+  --zest: #daff00;
+  --fizz: #00f0ff;
   --ink: #000000;
-  --background: #FFFDF5;
-  --foreground: #1A1A1A;
-  --card-bg: #FFFFFF;
+  --background: #fffdf5;
+  --foreground: #1a1a1a;
+  --card-bg: #ffffff;
   --border-width: 3px;
   --shadow-color: #000000;
   --shadow-offset: 6px 6px 0px;
@@ -26,28 +26,28 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
-  --zest: #DAFF00;
-  --fizz: #FF00EA;
+  --zest: #daff00;
+  --fizz: #ff00ea;
   --ink: #000000;
   --background: #050505;
-  --foreground: #DAFF00;
+  --foreground: #daff00;
   --card-bg: #171717;
   --border-width: 3px;
-  --shadow-color: #FFFFFF;
+  --shadow-color: #ffffff;
   --shadow-offset: 6px 6px 0px;
   --dot-color: rgba(255, 255, 255, 0.15);
 
   /* legacy/shorthand mappings */
   --accent: var(--zest);
-  --border: #FFFFFF;
+  --border: #ffffff;
   --muted: #595959;
-  --card-bg-secondary: #412A4C;
+  --card-bg-secondary: #412a4c;
 }
 
 @theme inline {
   --font-mono: "JetBrains Mono", monospace;
   --font-heading: "Archivo Black", sans-serif;
-  
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
@@ -58,7 +58,7 @@ html[data-theme="dark"] {
   --color-border: var(--border);
   --color-card-bg: var(--card-bg);
   --color-card-bg-secondary: var(--card-bg-secondary);
-  
+
   --shadow-neo: var(--shadow-offset) var(--shadow-color);
   --border-width-neo: var(--border-width);
 }
@@ -76,7 +76,7 @@ html[data-theme="dark"] {
 
   body {
     @apply bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: "JetBrains Mono", monospace;
   }
 
   a,
@@ -85,7 +85,7 @@ html[data-theme="dark"] {
   }
 
   button {
-    @apply border-neo shadow-neo hover-neo bg-card-bg px-4 py-1;
+    @apply hover-neo border-neo bg-card-bg px-4 py-1 shadow-neo;
   }
 
   button:not(:disabled),

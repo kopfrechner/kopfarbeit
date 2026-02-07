@@ -38,10 +38,7 @@ export const transformerFileName = ({
     if (!file) return;
 
     // Add additional margin to code block
-    this.addClassToHast(
-      node,
-      `mt-8`
-    );
+    this.addClassToHast(node, `mt-8`);
 
     // Add file name to code block
     node.children.push({
