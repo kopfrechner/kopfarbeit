@@ -10,13 +10,13 @@ html[data-theme="light"] {
   --zest: #DAFF00;
   --fizz: #00F0FF;
   --ink: #000000;
-  --background: #FFFDF5;
+  --background: #FAFAFA;
   --foreground: #1A1A1A;
   --card-bg: #FFFFFF;
   --border-width: 3px;
   --shadow-color: #000000;
   --shadow-offset: 6px 6px 0px;
-  --dot-color: rgba(0, 0, 0, 0.15);
+  --dot-color: rgba(0, 0, 0, 0.1);
 
   /* legacy/shorthand mappings */
   --accent: var(--zest);
@@ -29,13 +29,13 @@ html[data-theme="dark"] {
   --zest: #DAFF00;
   --fizz: #FF00EA;
   --ink: #000000;
-  --background: #121212;
+  --background: #050505;
   --foreground: #DAFF00;
-  --card-bg: #252525;
+  --card-bg: #171717;
   --border-width: 3px;
   --shadow-color: #FFFFFF;
   --shadow-offset: 6px 6px 0px;
-  --dot-color: rgba(255, 255, 255, 0.2);
+  --dot-color: rgba(255, 255, 255, 0.15);
 
   /* legacy/shorthand mappings */
   --accent: var(--zest);
