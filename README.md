@@ -1,8 +1,8 @@
-# Soda Zitrone 🍋
+# Sodazitron 🍋
 
-**Soda Zitrone** is the personal blog and digital playground of **Christoph Kopf**. It's a space where I document my thoughts, technical discoveries, and the projects I build. Based in Linz, Austria, I've spent years in the .NET ecosystem and am currently exploring Kotlin, Spring, and the transformative impact of AI on software engineering.
+**Sodazitron** is the personal blog and digital playground of **Christoph Kopf**. It's a space where I document my thoughts, technical discoveries, and the projects I build. Based in Linz, Austria, I've spent years in the .NET ecosystem and am currently exploring Kotlin, Spring, and the transformative impact of AI on software engineering.
 
-Visit the live site: [soda-zitrone.dev](https://soda-zitrone.dev)
+Visit the live site: [sodazitron.dev](https://sodazitron.dev)
 
 ## 🎯 About the Project
 

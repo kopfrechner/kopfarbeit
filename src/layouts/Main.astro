@@ -20,36 +20,40 @@ const backUrl = SITE.showBackButton ? Astro.url.pathname : "/";
 <main data-backUrl={backUrl} id="main-content" class="app-layout pb-4">
   {
     singleCard ? (
-      <div class="rounded-md bg-card-bg-secondary p-4 shadow-neo border-neo">
+      <div class="bg-card-bg p-8 shadow-neo border-neo">
         {"titleTransition" in props ? (
-          <h1 class="text-2xl font-semibold sm:text-3xl">
-            {props.pageTitle[0]}
+          <h1 class="text-3xl font-heading uppercase tracking-tighter text-ink sm:text-5xl leading-[0.9]">
+            <span class="bg-fizz px-2">{props.pageTitle[0]}</span>
             <span transition:name={props.titleTransition}>
               {props.pageTitle[1]}
             </span>
           </h1>
         ) : (
-          <h1 class="text-2xl font-semibold sm:text-3xl">{props.pageTitle}</h1>
+          <h1 class="text-3xl font-heading uppercase tracking-tighter text-ink sm:text-5xl leading-[0.9]">
+            <span class="bg-fizz px-2">{props.pageTitle}</span>
+          </h1>
         )}
-        <p class="mt-2 mb-6 italic">{props.pageDesc}</p>
-        <slot />
+        <p class="mt-6 italic">{props.pageDesc}</p>
+        <div class="mt-8">
+          <slot />
+        </div>
       </div>
     ) : (
       <>
-        <div class="rounded-md bg-card-bg-secondary p-4 shadow-neo border-neo">
+        <div class="bg-card-bg p-8 shadow-neo border-neo">
           {"titleTransition" in props ? (
-            <h1 class="text-2xl font-semibold sm:text-3xl">
-              {props.pageTitle[0]}
+            <h1 class="text-3xl font-heading uppercase tracking-tighter text-ink sm:text-5xl leading-[0.9]">
+              <span class="bg-fizz px-2">{props.pageTitle[0]}</span>
               <span transition:name={props.titleTransition}>
                 {props.pageTitle[1]}
               </span>
             </h1>
           ) : (
-            <h1 class="text-2xl font-semibold sm:text-3xl">
-              {props.pageTitle}
+            <h1 class="text-3xl font-heading uppercase tracking-tighter text-ink sm:text-5xl leading-[0.9]">
+              <span class="bg-fizz px-2">{props.pageTitle}</span>
             </h1>
           )}
-          <p class="mt-2 mb-6 italic">{props.pageDesc}</p>
+          <p class="mt-6 italic">{props.pageDesc}</p>
         </div>
         <slot />
       </>

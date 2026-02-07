@@ -4,6 +4,7 @@ import Socials from "./Socials.astro";
 import LinkButton from "./LinkButton.astro";
 import { Image } from "astro:assets";
 import euFlag from "@/assets/images/eu-flag.svg";
+import { SITE } from "@/config";
 
 const currentYear = new Date().getFullYear();
 
@@ -20,42 +21,49 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
 >
   <div
     class:list={[
-      "rounded-md bg-card-bg p-4 shadow-neo border-neo",
-      "flex flex-col items-center justify-center sm:flex-row sm:gap-x-4",
-      "mb-4 text-sm",
+      "border-neo bg-card-bg p-8 shadow-neo",
+      "flex flex-col items-center justify-center space-y-6",
+      "mb-8 text-base font-bold tracking-tight uppercase",
     ]}
   >
-    <Socials />
+    <div class="flex flex-col items-center space-y-4">
+      <span class="font-heading text-2xl tracking-tighter">
+        {SITE.title}
+      </span>
+      <Socials />
+    </div>
+
     <div
-      class="my-2 flex flex-col items-center lg:flex-row lg:justify-center lg:gap-x-2 lg:whitespace-nowrap"
+      class="flex flex-col items-center justify-center gap-y-2 text-center text-sm sm:flex-row sm:gap-x-4 sm:gap-y-0"
     >
-      <div class="flex flex-col items-center md:flex-row md:gap-x-2">
-        <span>Copyright &#169; {currentYear}</span>
-        <span class="hidden md:inline">|</span>
-        <span>All rights reserved</span>
+      <div class="flex flex-col items-center sm:flex-row sm:gap-x-2">
+        <span>&#169; {currentYear}</span>
+        <span class="hidden sm:inline">|</span>
+        <span>Freshly Squeezed</span>
       </div>
 
-      <span class="hidden lg:inline">|</span>
+      <span class="hidden sm:inline">|</span>
 
-      <div class="flex flex-col-reverse items-center md:flex-row md:gap-x-2">
-        <span class="flex items-center">
-          <Image src={euFlag} alt="EU Flag" class="inline-block h-auto w-7" />
-          EU hosted
+      <div class="flex flex-col items-center sm:flex-row sm:gap-x-2">
+        <span class="flex items-center gap-x-2">
+          <Image
+            src={euFlag}
+            alt="EU Flag"
+            class="inline-block h-auto w-6 border border-ink"
+          />
+          EU HOSTED
         </span>
-        <span class="hidden md:inline">|</span>
-        <span>
-          Made with
+        <span class="hidden sm:inline">|</span>
+        <span class="flex items-center gap-x-1">
+          POWERED BY
           <LinkButton
-            href="https://github.com/withastro/astro"
+            href="https://astro.build"
             target="_blank"
-            rel="noopener noreferrer">Astro</LinkButton
+            rel="noopener noreferrer"
+            class="underline-offset-4 hover:text-accent"
           >
-          <LinkButton
-            href="https://github.com/satnaing/astro-paper"
-            target="_blank"
-            rel="noopener noreferrer">Paper</LinkButton
-          >
-          and <span class="text-red-500">💜</span>
+            ASTRO
+          </LinkButton>
         </span>
       </div>
     </div>

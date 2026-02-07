@@ -1,9 +1,10 @@
-# Project: Soda Zitrone Rebrand
+# Project: Sodazitron Rebrand
 
-**Goal:** Rebrand "KopfarbeIT" to **"soda-zitrone.dev"** and implement a high-contrast, neobrutalist "fresh" design.
+**Goal:** Rebrand "KopfarbeIT" to **"sodazitron.dev"** and implement a high-contrast, neobrutalist "fresh" design.
 
 ## Context
-The user wants to pivot their existing Astro/Tailwind blog from a dark/tech aesthetic to a "soda zitrone" vibe: sour, refreshing, and zesty. The new design emphasizes neobrutalism—sharp borders, hard shadows, vibrant acidic colors—and pixel art accents.
+The user wants to pivot their existing Astro/Tailwind blog from a dark/tech aesthetic to a "sodazitron" vibe: sour, refreshing, and zesty.
+ The new design emphasizes neobrutalism—sharp borders, hard shadows, vibrant acidic colors—and pixel art accents.
 
 ## Core Value
 **"Freshness."** The site should feel like a cold drink: crisp, distinct, and energizing.

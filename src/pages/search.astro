@@ -102,9 +102,9 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
     --pagefind-ui-border: var(--border);
     --pagefind-ui-primary: var(--accent);
     --pagefind-ui-tag: var(--background);
-    --pagefind-ui-border-radius: 0.375rem;
-    --pagefind-ui-border-width: 1px;
-    --pagefind-ui-image-border-radius: 8px;
+    --pagefind-ui-border-radius: 0px;
+    --pagefind-ui-border-width: 3px;
+    --pagefind-ui-image-border-radius: 0px;
     --pagefind-ui-image-box-ratio: 3 / 2;
 
     form::before {
@@ -112,33 +112,129 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
     }
 
     input {
-      font-weight: 400;
-      border: 1px solid var(--border);
+      font-weight: 700;
+      border: 3px solid var(--border) !important;
+      box-shadow: 6px 6px 0px var(--shadow-color);
+      background-color: var(--background) !important;
+      color: var(--foreground) !important;
+    }
+
+    input::placeholder {
+      color: var(--foreground) !important;
+      opacity: 0.4;
     }
 
     input:focus-visible {
-      outline: 1px solid var(--accent);
+      outline: none;
+    }
+
+    .pagefind-ui__message {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 2rem;
+      color: var(--foreground);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .pagefind-ui__result {
+      border-bottom: 3px solid var(--border) !important;
+      padding: 2rem 0;
     }
 
     .pagefind-ui__result-title a {
-      color: var(--accent);
-      outline-offset: 1px;
-      outline-color: var(--accent);
+      color: var(--fizz);
+      font-family: var(--font-heading);
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
     }
 
-    .pagefind-ui__result-title a:focus-visible,
-    .pagefind-ui__search-clear:focus-visible {
-      text-decoration-line: none;
-      outline-width: 2px;
-      outline-style: dashed;
+    .pagefind-ui__result-title a:hover {
+      color: var(--zest);
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 4px;
+    }
+
+    .pagefind-ui__result-excerpt {
+      color: var(--foreground);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    mark {
+      background-color: transparent !important;
+      color: var(--zest) !important;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .pagefind-ui__search-clear {
+      background-color: var(--zest) !important;
+      color: var(--ink) !important;
+      border: 2px solid var(--border) !important;
+      border-radius: 0px !important;
+      font-weight: 700 !important;
+      padding: 0 0.75rem !important;
+      height: 2rem !important;
+      top: 50% !important;
+      right: 1rem !important;
+      transform: translateY(-50%) !important;
+    }
+
+    .pagefind-ui__result-nested {
+      margin-top: 1rem;
+      padding-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .pagefind-ui__result-nested .pagefind-ui__result-link {
+      color: var(--foreground) !important;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .pagefind-ui__result-nested .pagefind-ui__result-link::before {
+      content: "↳";
+      margin-right: 0.5rem;
+      color: var(--fizz);
+      font-size: 1.2rem;
+    }
+
+    .pagefind-ui__result-nested .pagefind-ui__result-link:hover {
+      color: var(--fizz) !important;
+      text-decoration: underline;
     }
 
     .pagefind-ui__result:last-of-type {
-      border-bottom: 0;
+      border-bottom: 3px solid var(--border) !important;
     }
 
-    .pagefind-ui__result-nested .pagefind-ui__result-link:before {
-      font-family: system-ui;
+    .pagefind-ui__button {
+      border: 3px solid var(--border) !important;
+      box-shadow: 6px 6px 0px var(--shadow-color);
+      background-color: var(--card-bg) !important;
+      color: var(--foreground) !important;
+      font-family: var(--font-heading) !important;
+      text-transform: uppercase !important;
+      border-radius: 0px !important;
+      transition: all 0.2s ease;
+    }
+
+    .pagefind-ui__button:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 8px 8px 0px var(--shadow-color);
     }
   }
 </style>

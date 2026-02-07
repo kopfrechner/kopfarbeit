@@ -1,4 +1,4 @@
-# Requirements: Soda Zitrone Rebrand
+# Requirements: Sodazitron Rebrand
 
 ## v1 Requirements
 
@@ -14,13 +14,13 @@
 
 ### UI Components
 - [ ] **COMP-01**: Redesign `Card.astro` with thick borders and hard shadows.
-- [ ] **COMP-02**: Redesign `Header.astro` and `Footer.astro` with "soda-zitrone" branding.
+- [ ] **COMP-02**: Redesign `Header.astro` and `Footer.astro` with "sodazitron" branding.
 - [ ] **COMP-03**: Update buttons and tags to use neobrutalist hover translations.
 - [ ] **COMP-04**: Ensure search and comments components match the new aesthetic.
 
 ### Pages & Metadata
 - [ ] **PAGE-01**: Update homepage Hero section with "Freshly Squeezed" theme.
-- [ ] **PAGE-02**: Update global metadata (title, site URL) to `soda-zitrone.dev`.
+- [ ] **PAGE-02**: Update global metadata (title, site URL) to `sodazitron.dev`.
 
 ## v2 (Future)
 - [ ] Interactive "bubble" animations on hover.
@@ -33,16 +33,33 @@
 ## Traceability
 
 | Requirement | Phase | Status |
+
 |-------------|-------|--------|
-| SYS-01 | Phase 1 | Pending |
-| SYS-02 | Phase 1 | Pending |
-| SYS-03 | Phase 1 | Pending |
-| SYS-04 | Phase 1 | Pending |
-| AST-01 | Phase 1 | Pending |
-| AST-02 | Phase 2 | Pending |
-| COMP-01 | Phase 2 | Pending |
-| COMP-02 | Phase 3 | Pending |
-| COMP-03 | Phase 2 | Pending |
-| COMP-04 | Phase 4 | Pending |
-| PAGE-01 | Phase 3 | Pending |
-| PAGE-02 | Phase 1 | Pending |
+
+| SYS-01 | Phase 1 | Completed |
+
+| SYS-02 | Phase 1 | Completed |
+
+| SYS-03 | Phase 1 | Completed |
+
+| SYS-04 | Phase 1 | Completed |
+
+| AST-01 | Phase 1 | Completed |
+
+| AST-02 | Phase 2 | Completed |
+
+| COMP-01 | Phase 2 | Completed |
+
+| COMP-02 | Phase 3 | Completed |
+
+| COMP-03 | Phase 2 | Completed |
+
+| COMP-04 | Phase 4 | Completed |
+
+| PAGE-01 | Phase 3 | Completed |
+
+| PAGE-02 | Phase 1 | Completed |
+
+
+
+

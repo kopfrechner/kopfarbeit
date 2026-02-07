@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@/utils/slugify";
 import { getPath } from "@/utils/getPath";
 import Datetime from "./Datetime.astro";
+import LinkButton from "./LinkButton.astro";
 
 type Props = {
   variant?: "h2" | "h3";
@@ -10,25 +11,45 @@ type Props = {
 
 const { variant: Heading = "h2", id, data, filePath } = Astro.props;
 
-const { title, description, ...props } = data;
+const { title, description, tags, ...props } = data;
 ---
 
 <li
   class:list={[
-    "my-6 bg-card-bg p-6 shadow-neo border-neo hover-neo",
-    "rounded-tl-md rounded-tr-sm rounded-br-md rounded-bl-sm",
+    "group relative my-12 flex hover-neo flex-col border-neo bg-card-bg shadow-neo transition-all duration-200",
   ]}
 >
   <a
     href={getPath(id, filePath)}
-    class:list={[
-      "inline-block text-lg font-medium text-accent decoration-dashed underline-offset-4 hover:underline focus-visible:no-underline focus-visible:underline-offset-0",
-    ]}
+    class="border-b-[3px] border-ink bg-zest p-8 transition-opacity hover:opacity-90"
   >
-    <Heading style={{ viewTransitionName: slugifyStr(title) }}>
+    <Heading
+      class="font-heading text-3xl tracking-tighter text-ink uppercase sm:text-4xl"
+      style={{ viewTransitionName: slugifyStr(title) }}
+    >
       {title}
     </Heading>
   </a>
-  <Datetime {...props} />
-  <p>{description}</p>
+  <div class="flex flex-1 flex-col p-8">
+    <div class="mb-4 flex flex-wrap items-center justify-between gap-4">
+      <Datetime {...props} />
+      <div class="flex flex-wrap gap-2">
+        {
+          tags.map(tag => (
+            <span class="bg-fizz/30 px-2 py-0.5 text-xs font-bold text-foreground uppercase">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+    <p class="mb-6 line-clamp-3 flex-1 text-foreground/90">{description}</p>
+    <LinkButton
+      href={getPath(id, filePath)}
+      variant="button"
+      class="w-fit bg-fizz text-xs font-bold tracking-widest text-ink uppercase"
+    >
+      Read More <span class="text-lg leading-none">&rarr;</span>
+    </LinkButton>
+  </div>
 </li>

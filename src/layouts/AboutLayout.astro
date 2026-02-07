@@ -16,15 +16,15 @@ const { frontmatter } = Astro.props;
   <Header />
   {SITE.showBreadcrumbs && <Breadcrumb />}
   <main id="main-content" class="app-layout">
-    <div class="mb-4 rounded-md bg-card-bg-secondary p-4 shadow-neo border-neo">
-      <h1 class="text-2xl font-semibold tracking-wider sm:text-3xl">
-        {frontmatter.title}
+    <div class="mb-8 bg-card-bg p-8 shadow-neo border-neo">
+      <h1 class="text-3xl font-heading uppercase tracking-tighter text-ink sm:text-5xl leading-[0.9]">
+        <span class="bg-fizz px-2">{frontmatter.title}</span>
       </h1>
-      <p class="mt-4 italic">{frontmatter.description}</p>
+      <p class="mt-6 italic">{frontmatter.description}</p>
     </div>
     <div
       id="about"
-      class="app-prose mb-28 flow-root max-w-app rounded-md bg-card-bg p-4 shadow-neo border-neo prose-img:border-0"
+      class="app-prose mb-28 flow-root max-w-app bg-card-bg p-8 shadow-neo border-neo prose-img:border-0"
     >
       <slot />
     </div>

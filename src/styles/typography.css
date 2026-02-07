@@ -1,7 +1,14 @@
 @plugin "@tailwindcss/typography";
 
 @layer base {
-  h1, h2, h3, h4, h5, h6, .brand {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .brand {
     font-family: 'Archivo Black', sans-serif;
     text-transform: uppercase;
     letter-spacing: -1px;
@@ -58,6 +65,7 @@
     }
 
     table {
+
       th,
       td {
         @apply border border-border p-2;
@@ -73,7 +81,7 @@
     }
 
     code {
-      @apply rounded bg-accent/15 px-1.5 py-0.5 wrap-break-word text-foreground before:content-none after:content-none;
+      @apply bg-fizz/30 text-foreground px-1.5 py-0.5 wrap-break-word font-bold before:content-none after:content-none;
     }
 
     .astro-code code {
@@ -85,7 +93,7 @@
     }
 
     details {
-      @apply inline-block cursor-pointer text-foreground select-none [&_p]:hidden [&_ul]:my-0!;
+      @apply inline-block cursor-pointer text-foreground select-none [&_p]:hidden [&_ul]:!my-0;
     }
 
     summary {
@@ -99,11 +107,11 @@
 
   /* ===== Code Blocks & Syntax Highlighting ===== */
   .astro-code {
-    @apply flex border bg-card-bg! text-(--shiki-light) outline-border [&_span]:text-(--shiki-light);
+    @apply flex border-neo !bg-card-bg text-(--shiki-light) shadow-neo [&_span]:text-(--shiki-light);
   }
 
   html[data-theme="dark"] .astro-code {
-    @apply bg-card-bg! text-(--shiki-dark) [&_span]:text-(--shiki-dark);
+    @apply !bg-card-bg text-(--shiki-dark) [&_span]:text-(--shiki-dark);
   }
 
   /* Styles for Shiki transformers */
@@ -112,14 +120,17 @@
     .line.diff.add {
       @apply relative inline-block w-full bg-green-400/20 before:absolute before:-left-3 before:text-green-500 before:content-['+'];
     }
+
     .line.diff.remove {
       @apply relative inline-block w-full bg-red-500/20 before:absolute before:-left-3 before:text-red-500 before:content-['-'];
     }
+
     .line.highlighted {
       @apply inline-block w-full bg-slate-400/20;
     }
+
     .highlighted-word {
-      @apply rounded-sm border border-border px-0.5 py-px;
+      @apply border border-border px-0.5 py-px;
     }
   }
 }

@@ -8,8 +8,8 @@ interface CommentsProps {
 }
 
 export default function Comments({
-    lightTheme = "light",
-    darkTheme = "dark_dimmed",
+    lightTheme = "light_high_contrast",
+    darkTheme = "dark_high_contrast",
 }: CommentsProps) {
     const [theme, setTheme] = useState(() => {
         const currentTheme = localStorage.getItem("theme");
