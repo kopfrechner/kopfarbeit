@@ -1,7 +1,7 @@
-# GEMINI.md - KopfarbeIT
+# GEMINI.md - Soda Zitrone
 
 ## Project Overview
-**KopfarbeIT** is the personal blog and digital playground of **Christoph Kopf**. It is a static site built using **Astro v5** and **TailwindCSS v4**, based on a customized version of the [AstroPaper](https://github.com/satnaing/astro-paper) theme. The blog serves as a professional portfolio and knowledge base, focusing on .NET, modern web technologies (Kotlin, Spring, Astro), and AI-assisted development.
+**Soda Zitrone** is the personal blog and digital playground of **Christoph Kopf**. It is a static site built using **Astro v5** and **TailwindCSS v4**, based on a customized version of the [AstroPaper](https://github.com/satnaing/astro-paper) theme. The blog serves as a professional portfolio and knowledge base, focusing on .NET, modern web technologies (Kotlin, Spring, Astro), and AI-assisted development.
 
 ### Key Technologies
 - **Framework**: [Astro v5](https://astro.build/) (SSG)

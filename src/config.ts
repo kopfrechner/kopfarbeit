@@ -1,9 +1,9 @@
 export const SITE = {
-  website: "https://kopfarbeit.dev", // replace this with your deployed domain
+  website: "https://soda-zitrone.dev", // replace this with your deployed domain
   author: "Christoph Kopf",
   profile: "https://www.linkedin.com/in/christoph-kopf-9b7a74b2",
-  desc: "KopfarbeIT: A digital logbook for documenting thoughts, discoveries, and the journey of building software. A personal log of learning experiences, from Software Engineering to the future of AI-driven engineering.",
-  title: "KopfarbeIT",
+  desc: "Soda Zitrone: A digital logbook for documenting thoughts, discoveries, and the journey of building software. A personal log of learning experiences, from Software Engineering to the future of AI-driven engineering.",
+  title: "soda-zitrone.dev",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
