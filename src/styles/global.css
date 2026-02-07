@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap'); /* Archivo Black */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap'); /* JetBrains Mono */
 @import "tailwindcss";
 @import "./typography.css";
 
@@ -5,34 +7,58 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #f0ede5;
-  --foreground: #0d0d0d;
-  --accent: #e78003;
+  --zest: #DAFF00;
+  --fizz: #00F0FF;
+  --ink: #000000;
+  --background: #FFFDF5;
+  --foreground: #1A1A1A;
+  --card-bg: #FFFFFF;
+  --border-width: 3px;
+  --shadow-color: #000000;
+  --shadow-offset: 6px 6px 0px;
+
+  /* legacy/shorthand mappings */
+  --accent: var(--zest);
+  --border: var(--ink);
   --muted: #dbe1e9;
-  --border: #000000;
-  --card-bg: #ffffff;
   --card-bg-secondary: #fcebd5;
 }
 
 html[data-theme="dark"] {
-  --background: #1a1a1a;
-  --foreground: #f2f2f2;
-  --accent: #9601b8;
+  --zest: #DAFF00;
+  --fizz: #FF00EA;
+  --ink: #000000;
+  --background: #121212;
+  --foreground: #DAFF00;
+  --card-bg: #252525;
+  --border-width: 3px;
+  --shadow-color: #FFFFFF;
+  --shadow-offset: 6px 6px 0px;
+
+  /* legacy/shorthand mappings */
+  --accent: var(--zest);
+  --border: var(--ink);
   --muted: #595959;
-  --border: #000000;
-  --card-bg: #2d2d2d;
   --card-bg-secondary: #412A4C;
 }
 
 @theme inline {
+  --font-mono: "JetBrains Mono", monospace;
+  --font-heading: "Archivo Black", sans-serif;
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
+  --color-zest: var(--zest);
+  --color-fizz: var(--fizz);
+  --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-card-bg: var(--card-bg);
   --color-card-bg-secondary: var(--card-bg-secondary);
-  --shadow-neo: 6px 6px 0px 0px #000;
+  
+  --shadow-neo: var(--shadow-offset) var(--shadow-color);
+  --border-width-neo: var(--border-width);
 }
 
 @layer base {
@@ -48,6 +74,7 @@ html[data-theme="dark"] {
 
   body {
     @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    font-family: 'JetBrains Mono', monospace;
   }
 
   a,
@@ -70,11 +97,11 @@ html[data-theme="dark"] {
 }
 
 @utility shadow-neo {
-  box-shadow: 6px 6px 0px 0px #000;
+  box-shadow: var(--shadow-offset) var(--shadow-color);
 }
 
 @utility border-neo {
-  border: 3px solid #000;
+  border: var(--border-width) solid var(--border);
 }
 
 /* Background Noise Layer */
