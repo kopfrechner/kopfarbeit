@@ -28,9 +28,9 @@
 **Goal:** Transform core UI primitives into tactile, high-contrast neobrutalist elements.
 
 **Plans:** 3 plans
-- [ ] 02-01-PLAN.md — Neobrutalist Primitives (Cards & Buttons)
-- [ ] 02-02-PLAN.md — Pixel Art Assets (Lemon, Bottle, Leaf)
-- [ ] 02-03-PLAN.md — Component Decoration & Polish
+- [x] 02-01-PLAN.md — Neobrutalist Primitives (Cards & Buttons)
+- [x] 02-02-PLAN.md — Pixel Art Assets (Lemon, Bottle, Leaf)
+- [x] 02-03-PLAN.md — Component Decoration & Polish
 
 ### Requirements
 - **COMP-01**: Redesign `Card.astro` with thick borders and hard shadows.
@@ -44,6 +44,10 @@
 
 ## Phase 3: Page Implementation
 **Goal:** Apply the new branding to the site's structural layout and main landing areas.
+
+**Plans:** 2 plans
+- [ ] 03-01-PLAN.md — Header & Footer Redesign
+- [ ] 03-02-PLAN.md — Hero Section Impact
 
 ### Requirements
 - **COMP-02**: Redesign `Header.astro` and `Footer.astro` with "soda-zitrone" branding.
@@ -70,6 +74,6 @@
 | Phase | Status | Requirements |
 |-------|--------|--------------|
 | 1. Styling Baseline | **Completed** | 6 |
-| 2. Component Redesign | **Pending** | 3 |
-| 3. Page Implementation | **Pending** | 2 |
+| 2. Component Redesign | **Completed** | 3 |
+| 3. Page Implementation | **In Progress** | 2 |
 | 4. Final Polish | **Pending** | 1 |
