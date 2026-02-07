@@ -46,8 +46,8 @@
 **Goal:** Apply the new branding to the site's structural layout and main landing areas.
 
 **Plans:** 2 plans
-- [ ] 03-01-PLAN.md — Header & Footer Redesign
-- [ ] 03-02-PLAN.md — Hero Section Impact
+- [x] 03-01-PLAN.md — Header & Footer Redesign
+- [x] 03-02-PLAN.md — Hero Section Impact
 
 ### Requirements
 - **COMP-02**: Redesign `Header.astro` and `Footer.astro` with "soda-zitrone" branding.
@@ -60,6 +60,11 @@
 
 ## Phase 4: Final Polish
 **Goal:** Ensure complete aesthetic consistency across all secondary features and edge cases.
+
+**Plans:** 3 plans
+- [ ] 04-01-PLAN.md — Feature Redesign (Search & Comments)
+- [ ] 04-02-PLAN.md — Layout Sharpness
+- [ ] 04-03-PLAN.md — Component & Script Polish
 
 ### Requirements
 - **COMP-04**: Ensure search and comments components match the new aesthetic.
@@ -75,5 +80,5 @@
 |-------|--------|--------------|
 | 1. Styling Baseline | **Completed** | 6 |
 | 2. Component Redesign | **Completed** | 3 |
-| 3. Page Implementation | **In Progress** | 2 |
+| 3. Page Implementation | **Completed** | 2 |
 | 4. Final Polish | **Pending** | 1 |
