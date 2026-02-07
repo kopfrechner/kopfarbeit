@@ -27,6 +27,11 @@
 ## Phase 2: Component Redesign
 **Goal:** Transform core UI primitives into tactile, high-contrast neobrutalist elements.
 
+**Plans:** 3 plans
+- [ ] 02-01-PLAN.md — Neobrutalist Primitives (Cards & Buttons)
+- [ ] 02-02-PLAN.md — Pixel Art Assets (Lemon, Bottle, Leaf)
+- [ ] 02-03-PLAN.md — Component Decoration & Polish
+
 ### Requirements
 - **COMP-01**: Redesign `Card.astro` with thick borders and hard shadows.
 - **COMP-03**: Update buttons and tags to use neobrutalist hover translations.
