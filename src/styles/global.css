@@ -75,7 +75,7 @@ html[data-theme="dark"] {
   }
 
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    @apply bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
     font-family: 'JetBrains Mono', monospace;
   }
 
@@ -131,6 +131,11 @@ html[data-theme="dark"] {
   position: relative;
   isolation: isolate;
   min-height: 100vh;
+}
+
+.dot-grid {
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 0);
+  background-size: 16px 16px;
 }
 
 .active-nav {

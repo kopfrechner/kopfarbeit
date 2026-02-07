@@ -1,0 +1,24 @@
+---
+import LemonHalf from "./pixel/LemonHalf.astro";
+import SodaGlass from "./pixel/SodaGlass.astro";
+---
+
+<div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+  <!-- Left Side: Soda Glass (Floating) -->
+  <div
+    class="absolute top-[20%] -left-20 rotate-6 transition-all duration-700 hover:rotate-0 sm:-left-10 lg:left-0 xl:left-[2%] 2xl:left-[5%]"
+  >
+    <div class="relative">
+      <SodaGlass class="size-48 sm:size-56 lg:size-64" />
+    </div>
+  </div>
+
+  <!-- Right Side: Lemon Half (Floating) -->
+  <div
+    class="absolute -right-16 bottom-[20%] rotate-6 transition-all duration-700 hover:rotate-0 sm:-right-8 lg:right-[2%] xl:right-[4%] 2xl:right-[6%]"
+  >
+    <div class="relative">
+      <LemonHalf class="size-32 sm:size-40 lg:size-44" />
+    </div>
+  </div>
+</div>

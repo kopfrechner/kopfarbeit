@@ -34,7 +34,7 @@ const isActive = (path: string) => {
 </a>
 
 <header
-  class="app-layout mt-8 flex flex-col items-center justify-between sm:flex-row"
+  class="app-layout mt-8 flex flex-col items-center justify-between md:flex-row"
 >
   <div
     id="top-nav-wrap"
@@ -42,12 +42,12 @@ const isActive = (path: string) => {
       "py-4 sm:py-6",
       "mb-4",
       "relative w-full border-neo bg-zest p-6 text-ink shadow-neo",
-      "flex items-baseline justify-between sm:items-center",
+      "flex items-center justify-between",
     ]}
   >
     <a
       href="/"
-      class="absolute hover-neo py-1 text-xl leading-8 whitespace-nowrap text-ink transition-all duration-200 sm:static sm:my-auto sm:text-3xl sm:leading-none"
+      class="hover-neo py-1 text-xl leading-8 whitespace-nowrap text-ink transition-all duration-200 md:my-auto md:text-3xl md:leading-none"
     >
       <span class="font-heading tracking-tighter uppercase"
         ><span id="typewriter-title">&gt; {SITE.title}_</span></span
@@ -55,11 +55,11 @@ const isActive = (path: string) => {
     </a>
     <nav
       id="nav-menu"
-      class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"
+      class="flex flex-col items-center md:ms-2 md:flex-row md:justify-end md:space-x-4 md:py-0"
     >
       <button
         id="menu-btn"
-        class="focus-outline self-end border-neo bg-background p-2 shadow-neo sm:hidden"
+        class="focus-outline self-end border-neo bg-background p-2 shadow-neo md:hidden"
         aria-label="Open Menu"
         aria-expanded="false"
         aria-controls="menu-items"
@@ -71,16 +71,16 @@ const isActive = (path: string) => {
         id="menu-items"
         class:list={[
           "mt-4 grid w-full grid-cols-2 place-content-center gap-4",
-          "[&>li>a]:block [&>li>a]:px-6 [&>li>a]:py-3 [&>li>a]:text-center [&>li>a]:font-bold [&>li>a]:tracking-widest [&>li>a]:text-ink [&>li>a]:uppercase [&>li>a]:hover:opacity-75 sm:[&>li>a]:px-4 sm:[&>li>a]:py-2",
+          "[&>li>a]:block [&>li>a]:px-6 [&>li>a]:py-3 [&>li>a]:text-center [&>li>a]:font-bold [&>li>a]:tracking-widest [&>li>a]:text-ink [&>li>a]:uppercase [&>li>a]:hover:opacity-75 md:[&>li>a]:px-4 md:[&>li>a]:py-2",
           "hidden",
-          "sm:mt-0 sm:flex sm:w-auto sm:gap-x-2 sm:gap-y-0",
+          "md:mt-0 md:flex md:w-auto md:gap-x-2 md:gap-y-0",
         ]}
       >
         <li>
           <a
             href="/posts"
             class:list={[
-              "border-neo bg-background shadow-neo sm:border-0 sm:bg-transparent sm:shadow-none",
+              "border-neo bg-background shadow-neo md:border-0 md:bg-transparent md:shadow-none",
               { "active-nav": isActive("/posts") },
             ]}
           >
@@ -91,7 +91,7 @@ const isActive = (path: string) => {
           <a
             href="/tags"
             class:list={[
-              "border-neo bg-background shadow-neo sm:border-0 sm:bg-transparent sm:shadow-none",
+              "border-neo bg-background shadow-neo md:border-0 md:bg-transparent md:shadow-none",
               { "active-nav": isActive("/tags") },
             ]}
           >
@@ -102,7 +102,7 @@ const isActive = (path: string) => {
           <a
             href="/about"
             class:list={[
-              "border-neo bg-background shadow-neo sm:border-0 sm:bg-transparent sm:shadow-none",
+              "border-neo bg-background shadow-neo md:border-0 md:bg-transparent md:shadow-none",
               { "active-nav": isActive("/about") },
             ]}
           >
@@ -115,7 +115,7 @@ const isActive = (path: string) => {
               <LinkButton
                 href="/archives"
                 class:list={[
-                  "focus-outline flex justify-center p-3 text-ink hover:opacity-75 sm:p-1",
+                  "focus-outline flex justify-center p-3 text-ink hover:opacity-75 md:p-1",
                   {
                     "active-nav": isActive("/archives"),
                   },
@@ -123,8 +123,8 @@ const isActive = (path: string) => {
                 title="Archives"
                 aria-label="archives"
               >
-                <IconArchive class="hidden sm:inline-block" />
-                <span class="text-center font-bold tracking-widest uppercase sm:sr-only">
+                <IconArchive class="hidden md:inline-block" />
+                <span class="text-center font-bold tracking-widest uppercase md:sr-only">
                   Archives
                 </span>
               </LinkButton>
@@ -135,7 +135,7 @@ const isActive = (path: string) => {
           <LinkButton
             href="/search"
             class:list={[
-              "focus-outline flex p-3 text-ink hover:opacity-75 sm:p-1",
+              "focus-outline flex p-3 text-ink hover:opacity-75 md:p-1",
               {
                 "underline decoration-4 underline-offset-8":
                   isActive("/search"),

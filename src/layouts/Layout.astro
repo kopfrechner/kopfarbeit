@@ -3,6 +3,7 @@ import { ClientRouter } from "astro:transitions";
 import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
 import { SITE } from "@/config";
 import Toast from "@/components/Toast.astro";
+import SideDecorations from "@/components/SideDecorations.astro";
 import "@/styles/global.css";
 
 type Props = {
@@ -138,6 +139,7 @@ const structuredData = {
     <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body class="paper-texture">
+    <SideDecorations />
     <div class="relative z-10 flex min-h-svh flex-col">
       <slot />
     </div>
