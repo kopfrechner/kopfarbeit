@@ -84,6 +84,10 @@ html[data-theme="dark"] {
     @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
   }
 
+  button {
+    @apply border-neo shadow-neo hover-neo bg-card-bg px-4 py-1;
+  }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
@@ -104,6 +108,18 @@ html[data-theme="dark"] {
 
 @utility border-neo {
   border: var(--border-width) solid var(--border);
+}
+
+@utility hover-neo {
+  transition: all 0.2s ease;
+  &:hover:not(:disabled) {
+    translate: -2px -2px;
+    box-shadow: 8px 8px 0px var(--shadow-color);
+  }
+  &:active:not(:disabled) {
+    translate: 0px 0px;
+    box-shadow: 2px 2px 0px var(--shadow-color);
+  }
 }
 
 /* Dot-Grid Background */
