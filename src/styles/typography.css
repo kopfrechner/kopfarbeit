@@ -1,6 +1,12 @@
 @plugin "@tailwindcss/typography";
 
 @layer base {
+  h1, h2, h3, h4, h5, h6, .brand {
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+
   /* ===== Override default Tailwind Typography styles ===== */
   .app-prose {
     @apply prose;
