@@ -5,6 +5,11 @@
 ## Phase 1: Styling Baseline
 **Goal:** Establish the core visual language, color palette, and foundational identity of Soda Zitrone.
 
+**Plans:** 3 plans
+- [ ] 01-01-PLAN.md — Branding & Cleanup
+- [ ] 01-02-PLAN.md — CSS Foundation (Vars & Fonts)
+- [ ] 01-03-PLAN.md — Global Layout & Background
+
 ### Requirements
 - **SYS-01**: Implement core neobrutalist CSS variables (Zest, Fizz, Ink, Hard Shadow).
 - **SYS-02**: Integrate "Archivo Black" and "JetBrains Mono" fonts.
