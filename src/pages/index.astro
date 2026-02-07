@@ -31,9 +31,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <h1
           class="my-4 font-heading text-5xl leading-[0.9] font-bold tracking-tighter uppercase sm:my-8 sm:text-7xl"
         >
-          Sodazitron: <span class="bg-fizz px-2 text-ink"
-            >Freshly Squeezed</span
-          > Code & Design
+          Sodazitron: <span class="bg-fizz px-2 text-ink">Freshly Squeezed</span
+          > Code & Thoughts
         </h1>
 
         <p class="text-xl leading-tight font-bold sm:text-2xl">
@@ -62,8 +61,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     {
       featuredPosts.length > 0 && (
         <section id="featured" class:list={["pt-16 pb-8"]}>
-          <div class="inline-block border-neo bg-card-bg px-6 py-2 shadow-neo">
-            <h2 class="font-heading text-2xl font-bold tracking-wider uppercase text-ink">
+          <div class="inline-block border-neo bg-zest px-6 py-2 shadow-neo">
+            <h2 class="font-heading text-2xl font-bold tracking-wider text-ink uppercase">
               Featured
             </h2>
           </div>
@@ -79,7 +78,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     {
       recentPosts.length > 0 && (
         <section id="recent-posts" class="pt-16 pb-8">
-          <div class="inline-block border-neo bg-card-bg px-6 py-2 shadow-neo">
+          <div class="inline-block border-neo bg-zest px-6 py-2 shadow-neo">
             <h2 class="font-heading text-2xl font-bold tracking-wider text-ink uppercase">
               Recent Posts
             </h2>
