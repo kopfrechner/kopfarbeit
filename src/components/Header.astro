@@ -22,9 +22,6 @@ const isActive = (path: string) => {
 };
 ---
 
-<script is:inline src="https://unpkg.com/typewriter-effect@latest/dist/core.js"
-></script>
-
 <a
   id="skip-to-content"
   href="#main-content"
@@ -47,7 +44,7 @@ const isActive = (path: string) => {
   >
     <a
       href="/"
-      class="hover-neo py-1 text-xl leading-8 whitespace-nowrap text-ink transition-all duration-200 md:my-auto md:text-3xl md:leading-none"
+      class="py-1 text-xl leading-8 whitespace-nowrap text-ink transition-all duration-200 md:my-auto md:text-3xl md:leading-none"
     >
       <span class="font-heading tracking-tighter uppercase"
         ><span id="typewriter-title">&gt; {SITE.title}_</span></span
@@ -75,10 +72,7 @@ const isActive = (path: string) => {
         <li class="col-span-2 md:col-span-1">
           <a
             href="/posts"
-            class:list={[
-              "border-neo bg-background shadow-neo md:border-0 md:bg-transparent md:shadow-none",
-              { "active-nav": isActive("/posts") },
-            ]}
+            class:list={["nav-item", { "active-nav": isActive("/posts") }]}
           >
             Posts
           </a>
@@ -86,10 +80,7 @@ const isActive = (path: string) => {
         <li class="col-span-2 md:col-span-1">
           <a
             href="/tags"
-            class:list={[
-              "border-neo bg-background shadow-neo md:border-0 md:bg-transparent md:shadow-none",
-              { "active-nav": isActive("/tags") },
-            ]}
+            class:list={["nav-item", { "active-nav": isActive("/tags") }]}
           >
             Tags
           </a>
@@ -97,10 +88,7 @@ const isActive = (path: string) => {
         <li class="col-span-2 md:col-span-1">
           <a
             href="/about"
-            class:list={[
-              "border-neo bg-background shadow-neo md:border-0 md:bg-transparent md:shadow-none",
-              { "active-nav": isActive("/about") },
-            ]}
+            class:list={["nav-item", { "active-nav": isActive("/about") }]}
           >
             About
           </a>
@@ -111,8 +99,7 @@ const isActive = (path: string) => {
               <LinkButton
                 href="/archives"
                 class:list={[
-                  "focus-outline flex justify-center p-3 text-foreground hover:opacity-75 md:p-1 md:text-ink",
-                  "border-neo bg-background shadow-neo md:border-0 md:bg-transparent md:shadow-none",
+                  "focus-outline flex justify-center nav-item p-3 text-foreground hover:opacity-75 md:p-1 md:text-ink",
                   {
                     "active-nav": isActive("/archives"),
                   },
@@ -132,8 +119,7 @@ const isActive = (path: string) => {
           <LinkButton
             href="/search"
             class:list={[
-              "focus-outline flex h-12 w-full items-center justify-center text-foreground hover:opacity-75 md:h-auto md:p-1 md:text-ink",
-              "border-neo bg-background shadow-neo md:border-0 md:bg-transparent md:shadow-none",
+              "focus-outline flex h-12 w-full items-center justify-center nav-item text-foreground hover:opacity-75 md:h-auto md:p-1 md:text-ink",
               {
                 "underline decoration-4 underline-offset-8":
                   isActive("/search"),
@@ -172,10 +158,7 @@ const isActive = (path: string) => {
 
 <script>
   import { SITE } from "@/config";
-
-  // Global declaration for the external Typewriter library loaded via CDN
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  declare const Typewriter: any;
+  import Typewriter from "typewriter-effect/dist/core";
 
   function initNav() {
     const menuBtn = document.querySelector("#menu-btn");

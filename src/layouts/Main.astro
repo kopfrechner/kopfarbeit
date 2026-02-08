@@ -20,16 +20,16 @@ const backUrl = SITE.showBackButton ? Astro.url.pathname : "/";
 <main data-backUrl={backUrl} id="main-content" class="app-layout pb-4">
   {
     singleCard ? (
-      <div class="border-neo bg-card-bg p-8 shadow-neo">
+      <div class="neo-box p-8">
         {"titleTransition" in props ? (
-          <h1 class="font-heading text-3xl leading-[0.9] tracking-tighter text-ink uppercase sm:text-5xl">
+          <h1 class="text-neo-display text-3xl sm:text-5xl">
             <span class="bg-fizz px-2">{props.pageTitle[0]}</span>
             <span transition:name={props.titleTransition}>
               {props.pageTitle[1]}
             </span>
           </h1>
         ) : (
-          <h1 class="font-heading text-3xl leading-[0.9] tracking-tighter text-ink uppercase sm:text-5xl">
+          <h1 class="text-neo-display text-3xl sm:text-5xl">
             <span class="bg-fizz px-2">{props.pageTitle}</span>
           </h1>
         )}
@@ -40,16 +40,16 @@ const backUrl = SITE.showBackButton ? Astro.url.pathname : "/";
       </div>
     ) : (
       <>
-        <div class="border-neo bg-card-bg p-8 shadow-neo">
+        <div class="neo-box p-8">
           {"titleTransition" in props ? (
-            <h1 class="font-heading text-3xl leading-[0.9] tracking-tighter text-ink uppercase sm:text-5xl">
+            <h1 class="text-neo-display text-3xl sm:text-5xl">
               <span class="bg-fizz px-2">{props.pageTitle[0]}</span>
               <span transition:name={props.titleTransition}>
                 {props.pageTitle[1]}
               </span>
             </h1>
           ) : (
-            <h1 class="font-heading text-3xl leading-[0.9] tracking-tighter text-ink uppercase sm:text-5xl">
+            <h1 class="text-neo-display text-3xl sm:text-5xl">
               <span class="bg-fizz px-2">{props.pageTitle}</span>
             </h1>
           )}

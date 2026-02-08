@@ -85,7 +85,7 @@ html[data-theme="dark"] {
   }
 
   button {
-    @apply hover-neo border-neo bg-card-bg px-4 py-1 shadow-neo;
+    @apply hover-neo neo-box px-4 py-1;
   }
 
   button:not(:disabled),
@@ -102,8 +102,8 @@ html[data-theme="dark"] {
   @apply mx-auto w-full max-w-app px-4;
 }
 
-@utility shadow-neo {
-  box-shadow: var(--shadow-offset) var(--shadow-color);
+@utility neo-box {
+  @apply border-neo bg-card-bg shadow-neo;
 }
 
 @utility border-neo {
@@ -120,6 +120,14 @@ html[data-theme="dark"] {
     translate: 0px 0px;
     box-shadow: 2px 2px 0px var(--shadow-color);
   }
+}
+
+@utility text-neo-display {
+  @apply font-heading leading-[0.9] tracking-tighter text-ink uppercase;
+}
+
+@utility nav-item {
+  @apply border-neo bg-background shadow-neo md:border-0 md:bg-transparent md:shadow-none;
 }
 
 /* Dot-Grid Background */
