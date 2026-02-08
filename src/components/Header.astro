@@ -68,7 +68,7 @@ const isActive = (path: string) => {
         id="menu-items"
         class:list={[
           "mt-4 w-full grid-cols-2 place-content-center gap-4 md:mt-0 md:flex md:w-auto md:gap-x-0 md:gap-y-0",
-          "[&>li>a]:flex [&>li>a]:items-center [&>li>a]:justify-center [&>li>a]:px-6 [&>li>a]:py-3 [&>li>a]:font-bold [&>li>a]:tracking-widest [&>li>a]:text-foreground md:[&>li>a]:text-ink [&>li>a]:uppercase [&>li>a]:hover:opacity-75 md:[&>li>a]:px-4 md:[&>li>a]:py-2",
+          "[&>li>a]:flex [&>li>a]:items-center [&>li>a]:justify-center [&>li>a]:px-6 [&>li>a]:py-3 [&>li>a]:font-bold [&>li>a]:tracking-widest [&>li>a]:text-foreground [&>li>a]:uppercase [&>li>a]:hover:opacity-75 md:[&>li>a]:px-4 md:[&>li>a]:py-2 md:[&>li>a]:text-ink",
           "hidden md:flex [&:not(.hidden)]:grid",
         ]}
       >
@@ -111,7 +111,7 @@ const isActive = (path: string) => {
               <LinkButton
                 href="/archives"
                 class:list={[
-                  "focus-outline flex justify-center p-3 text-foreground md:text-ink hover:opacity-75 md:p-1",
+                  "focus-outline flex justify-center p-3 text-foreground hover:opacity-75 md:p-1 md:text-ink",
                   "border-neo bg-background shadow-neo md:border-0 md:bg-transparent md:shadow-none",
                   {
                     "active-nav": isActive("/archives"),
@@ -132,7 +132,7 @@ const isActive = (path: string) => {
           <LinkButton
             href="/search"
             class:list={[
-              "focus-outline flex h-12 w-full items-center justify-center text-foreground md:text-ink hover:opacity-75 md:h-auto md:p-1",
+              "focus-outline flex h-12 w-full items-center justify-center text-foreground hover:opacity-75 md:h-auto md:p-1 md:text-ink",
               "border-neo bg-background shadow-neo md:border-0 md:bg-transparent md:shadow-none",
               {
                 "underline decoration-4 underline-offset-8":
