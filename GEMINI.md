@@ -36,6 +36,7 @@ The project uses `npm` for task execution:
 ## Development Conventions
 - **Path Aliases**: Use `@/` to refer to the `src/` directory (e.g., `import Layout from "@/layouts/Layout.astro"`).
 - **Quality Control**: Run the linter (`npm run lint`) and code formatter (`npm run format`) often to ensure code quality and consistent styling.
+- **Formatting Rule**: ALWAYS run `npm run format` before committing changes to ensure the CI pipeline passes.
 - **Content Schema**: All blog posts must adhere to the schema defined in `src/content.config.ts`.
 - **Styling**: Favor Tailwind CSS utility classes. The project uses the latest Tailwind v4 engine via Vite.
 - **Type Safety**: The project uses **TypeScript** and **astro-check** to ensure type safety across the codebase and content collections.
