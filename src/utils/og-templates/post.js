@@ -103,6 +103,18 @@ export default async post => {
                           },
                           children: [
                             {
+                              type: "img",
+                              props: {
+                                src: LEMON_HALF_SRC,
+                                width: 80, // Increased size from 48
+                                height: 80,
+                                style: {
+                                  display: "flex",
+                                  transform: "rotate(6deg)", // Rotated like SideDecorations
+                                },
+                              },
+                            },
+                            {
                               type: "span",
                               props: {
                                 children: "by " + post.data.author,
@@ -120,18 +132,6 @@ export default async post => {
                             gap: "12px",
                           },
                           children: [
-                            {
-                              type: "img",
-                              props: {
-                                src: LEMON_HALF_SRC,
-                                width: 80, // Increased size from 48
-                                height: 80,
-                                style: {
-                                  display: "flex",
-                                  transform: "rotate(6deg)", // Rotated like SideDecorations
-                                },
-                              },
-                            },
                             {
                               type: "div",
                               props: {
