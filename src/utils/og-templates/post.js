@@ -102,7 +102,7 @@ export default async post => {
                             {
                               type: "span",
                               props: {
-                                children: "✍️ " + post.data.author,
+                                children: "by " + post.data.author,
                               },
                             },
                           ],
