@@ -1,4 +1,4 @@
-export const LEMON_HALF_SVG = `
+const rawSvg = `
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="32" cy="32" r="30" fill="#000000"></circle>
   <circle cx="32" cy="32" r="27" fill="#daff00"></circle>
@@ -23,3 +23,5 @@ export const LEMON_HALF_SVG = `
   <rect x="25" y="42" width="2" height="2" fill="white" fill-opacity="0.2"></rect>
 </svg>
 `;
+
+export const LEMON_HALF_SRC = `data:image/svg+xml;base64,${Buffer.from(rawSvg).toString("base64")}`;

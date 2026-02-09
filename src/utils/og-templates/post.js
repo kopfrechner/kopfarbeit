@@ -2,7 +2,7 @@ import satori from "satori";
 // import { html } from "satori-html";
 import { SITE } from "@/config";
 import loadGoogleFonts from "../loadGoogleFont";
-import { LEMON_HALF_SVG } from "./assets";
+import { LEMON_HALF_SRC } from "./assets";
 
 export default async post => {
   return satori(
@@ -121,15 +121,13 @@ export default async post => {
                           },
                           children: [
                             {
-                              type: "div",
+                              type: "img",
                               props: {
+                                src: LEMON_HALF_SRC,
+                                width: 48,
+                                height: 48,
                                 style: {
                                   display: "flex",
-                                  width: "48px",
-                                  height: "48px",
-                                },
-                                dangerouslySetInnerHTML: {
-                                  __html: LEMON_HALF_SVG,
                                 },
                               },
                             },
