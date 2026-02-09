@@ -3,7 +3,7 @@ import { SOCIALS } from "@/constants";
 import LinkButton from "./LinkButton.astro";
 ---
 
-<div class="flex flex-wrap items-center gap-1 sm:flex-nowrap relative">
+<div class="relative flex flex-wrap items-center gap-1 sm:flex-nowrap">
   {
     SOCIALS.map(social => (
       <LinkButton
@@ -26,24 +26,27 @@ import LinkButton from "./LinkButton.astro";
     const socialLinks = document.querySelectorAll("[data-social-name='RSS']");
 
     socialLinks.forEach(link => {
-      link.addEventListener("click", async (e) => {
+      link.addEventListener("click", async e => {
         e.preventDefault();
         const href = link.getAttribute("href");
         if (href) {
-            const url = new URL(href, window.location.origin).href;
-            try {
-                await navigator.clipboard.writeText(url);
-                const rect = link.getBoundingClientRect();
-                window.dispatchEvent(new CustomEvent("toast", { 
-                    detail: { 
-                        message: "RSS URL Copied!",
-                        x: rect.left + rect.width / 2,
-                        y: rect.top
-                    } 
-                }));
-            } catch (err) {
-                console.error("Failed to copy: ", err);
-            }
+          const url = new URL(href, window.location.origin).href;
+          try {
+            await navigator.clipboard.writeText(url);
+            const rect = link.getBoundingClientRect();
+            window.dispatchEvent(
+              new CustomEvent("toast", {
+                detail: {
+                  message: "RSS URL Copied!",
+                  x: rect.left + rect.width / 2,
+                  y: rect.top,
+                },
+              })
+            );
+          } catch (err) {
+            // eslint-disable-next-line no-console
+            console.error("Failed to copy: ", err);
+          }
         }
       });
     });

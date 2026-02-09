@@ -1,7 +1,7 @@
-# GEMINI.md - KopfarbeIT
+# GEMINI.md - Sodazitron
 
 ## Project Overview
-**KopfarbeIT** is the personal blog and digital playground of **Christoph Kopf**. It is a static site built using **Astro v5** and **TailwindCSS v4**, based on a customized version of the [AstroPaper](https://github.com/satnaing/astro-paper) theme. The blog serves as a professional portfolio and knowledge base, focusing on .NET, modern web technologies (Kotlin, Spring, Astro), and AI-assisted development.
+**Sodazitron** is the personal blog and digital playground of **Christoph Kopf**. It is a static site built using **Astro v5** and **TailwindCSS v4**, based on a customized version of the [AstroPaper](https://github.com/satnaing/astro-paper) theme. The blog serves as a professional portfolio and knowledge base, focusing on .NET, modern web technologies (Kotlin, Spring, Astro), and AI-assisted development.
 
 ### Key Technologies
 - **Framework**: [Astro v5](https://astro.build/) (SSG)
@@ -22,7 +22,7 @@ The project follows the standard Astro structure with a focus on content-driven 
 - **`src/utils/`**: Helper functions for sorting posts, slugifying, and OG image generation.
 
 ## Building and Running
-The project uses `npm` (or `pnpm` as indicated by `pnpm-lock.yaml`) for task execution:
+The project uses `npm` for task execution:
 
 | Command | Action |
 | :--- | :--- |
@@ -35,6 +35,7 @@ The project uses `npm` (or `pnpm` as indicated by `pnpm-lock.yaml`) for task exe
 
 ## Development Conventions
 - **Path Aliases**: Use `@/` to refer to the `src/` directory (e.g., `import Layout from "@/layouts/Layout.astro"`).
+- **Quality Control**: Run the linter (`npm run lint`) and code formatter (`npm run format`) often to ensure code quality and consistent styling.
 - **Content Schema**: All blog posts must adhere to the schema defined in `src/content.config.ts`.
 - **Styling**: Favor Tailwind CSS utility classes. The project uses the latest Tailwind v4 engine via Vite.
 - **Type Safety**: The project uses **TypeScript** and **astro-check** to ensure type safety across the codebase and content collections.

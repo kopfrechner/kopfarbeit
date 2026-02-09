@@ -20,7 +20,7 @@ The problem was simple: I often hit raw OpenAPI spec files (JSON or YAML) and do
 
 ## The Process
 
-I started with a vague idea and let the AI drive. I didn't verify permissions or read up on Manifest V3; I just asked Gemini to scaffold the project. We hit walls, broke things, and fixed them. That's "vibe coding" to me—iterating fast with an assistant until the software feels right. Though, i review all changes and want to get a feeling of how the code is working under the hood. 
+I started with a vague idea and let the AI drive. I didn't verify permissions or read up on Manifest V3; I just asked Gemini to scaffold the project. We hit walls, broke things, and fixed them. That's "vibe coding" to me—iterating fast with an assistant until the software feels right. Though, i review all changes and want to get a feeling of how the code is working under the hood.
 
 ## Technical Hurdles
 
@@ -62,13 +62,13 @@ try {
 
 I initially asked for `<all_urls>` permission so the extension would work on any page. Google creates a terrifying warning for users when you do that.
 
-I switched to `activeTab` instead. It only grants access to the *current* tab when you explicitly click the icon. It's better for privacy and (hopefully) speeds up the review.
+I switched to `activeTab` instead. It only grants access to the _current_ tab when you explicitly click the icon. It's better for privacy and (hopefully) speeds up the review.
 
 ## The Web Store Experience
 
 I just wanted to share this with people, so I was annoyed to find a **$5 registration fee** for the Chrome Web Store.
 
-The submission process is tedious. Google asks *a lot* of privacy questions. Easy for me—I'm not collecting anything—but still a chore.
+The submission process is tedious. Google asks _a lot_ of privacy questions. Easy for me—I'm not collecting anything—but still a chore.
 
 Now I wait. The review process apparently takes weeks, and the worst part is the lock-in. You can't stop or update the submission once it's triggered. I have a footer update ready to go, but I'm locked out until they finish.
 

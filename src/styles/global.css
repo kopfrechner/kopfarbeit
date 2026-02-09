@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"); /* Archivo Black */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"); /* JetBrains Mono */
 @import "tailwindcss";
 @import "./typography.css";
 
@@ -5,34 +7,60 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #f0ede5;
-  --foreground: #0d0d0d;
-  --accent: #e78003;
-  --muted: #dbe1e9;
-  --border: #000000;
+  --zest: #daff00;
+  --fizz: #00f0ff;
+  --ink: #000000;
+  --background: #fffdf5;
+  --foreground: #1a1a1a;
   --card-bg: #ffffff;
+  --border-width: 3px;
+  --shadow-color: #000000;
+  --shadow-offset: 6px 6px 0px;
+  --dot-color: #000000;
+
+  /* legacy/shorthand mappings */
+  --accent: var(--zest);
+  --border: var(--ink);
+  --muted: #dbe1e9;
   --card-bg-secondary: #fcebd5;
 }
 
 html[data-theme="dark"] {
-  --background: #1a1a1a;
-  --foreground: #f2f2f2;
-  --accent: #9601b8;
+  --zest: #daff00;
+  --fizz: #ff00ea;
+  --ink: #000000;
+  --background: #050505;
+  --foreground: #daff00;
+  --card-bg: #171717;
+  --border-width: 3px;
+  --shadow-color: #ffffff;
+  --shadow-offset: 6px 6px 0px;
+  --dot-color: rgba(255, 255, 255, 0.15);
+
+  /* legacy/shorthand mappings */
+  --accent: var(--zest);
+  --border: #ffffff;
   --muted: #595959;
-  --border: #000000;
-  --card-bg: #2d2d2d;
-  --card-bg-secondary: #412A4C;
+  --card-bg-secondary: #412a4c;
 }
 
 @theme inline {
+  --font-mono: "JetBrains Mono", monospace;
+  --font-heading: "Archivo Black", sans-serif;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
+  --color-zest: var(--zest);
+  --color-fizz: var(--fizz);
+  --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-card-bg: var(--card-bg);
   --color-card-bg-secondary: var(--card-bg-secondary);
-  --shadow-neo: 6px 6px 0px 0px #000;
+
+  --shadow-neo: var(--shadow-offset) var(--shadow-color);
+  --border-width-neo: var(--border-width);
 }
 
 @layer base {
@@ -47,12 +75,17 @@ html[data-theme="dark"] {
   }
 
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    @apply bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    font-family: "JetBrains Mono", monospace;
   }
 
   a,
   button {
     @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
+  }
+
+  button {
+    @apply hover-neo neo-box px-4 py-1;
   }
 
   button:not(:disabled),
@@ -69,48 +102,48 @@ html[data-theme="dark"] {
   @apply mx-auto w-full max-w-app px-4;
 }
 
-@utility shadow-neo {
-  box-shadow: 6px 6px 0px 0px #000;
+@utility neo-box {
+  @apply border-neo bg-card-bg shadow-neo;
 }
 
 @utility border-neo {
-  border: 3px solid #000;
+  border: var(--border-width) solid var(--border);
 }
 
-/* Background Noise Layer */
-/* Creates a recycled paper texture with noise and fibers */
+@utility hover-neo {
+  transition: all 0.2s ease;
+  &:hover:not(:disabled) {
+    translate: -2px -2px;
+    box-shadow: 8px 8px 0px var(--shadow-color);
+  }
+  &:active:not(:disabled) {
+    translate: 0px 0px;
+    box-shadow: 2px 2px 0px var(--shadow-color);
+  }
+}
+
+@utility text-neo-display {
+  @apply font-heading leading-[0.9] tracking-tighter text-ink uppercase;
+}
+
+@utility nav-item {
+  @apply border-neo bg-background shadow-neo md:border-0 md:bg-transparent md:shadow-none;
+}
+
+/* Dot-Grid Background */
 .paper-texture {
   background-color: var(--color-background);
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 0);
+  background-size: 40px 40px;
+  background-attachment: fixed;
   position: relative;
   isolation: isolate;
   min-height: 100vh;
 }
 
-.paper-texture::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  /* 
-    Using SVG for grain/noise texture 
-    This creates a lightweight, scalable noise pattern without external image files
-  */
-  background-image: url('/images/noise.svg');
-  background-size: 100px 100px;
-  /* Smaller size for finer grain */
-  background-repeat: repeat;
-  opacity: 0.45;
-  background-blend-mode: multiply;
-}
-
-html[data-theme="dark"] .paper-texture::before {
-  /* In dark mode, we can adjust opacity or blend mode if needed, 
-     but often the same noise works well with just lower opacity 
-     or different blending against dark backgrounds. 
-     Let's style it for dark mode. */
-  opacity: 0.15;
-  background-blend-mode: soft-light;
+.dot-grid {
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 0);
+  background-size: 16px 16px;
 }
 
 .active-nav {

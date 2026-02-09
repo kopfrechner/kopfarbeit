@@ -16,6 +16,7 @@ export const GET: APIRoute = async () => {
     content += `URL: ${SITE.website}posts/${post.id}/\n`;
     content += `Published: ${post.data.pubDatetime.toISOString()}\n`;
     content += `Description: ${post.data.description}\n\n`;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     content += `${(post as any).body || ""}\n\n`;
     content += `---\n\n`;
   }

@@ -1,5 +1,4 @@
 ---
-import IconHash from "@/assets/icons/IconHash.svg";
 import LinkButton from "./LinkButton.astro";
 
 type Props = {
@@ -11,15 +10,16 @@ type Props = {
 const { tag, tagName, size = "lg" } = Astro.props;
 ---
 
-<li>
-  <LinkButton href={`/tags/${tag}/`}>
-    <IconHash
-      class:list={[
-        "opacity-80",
-        { "size-5": size === "lg" },
-        { "size-4": size === "sm" },
-      ]}
-    />
-    {tagName}
+<li class="inline-block">
+  <LinkButton
+    href={`/tags/${tag}/`}
+    variant="button"
+    class:list={[
+      "group relative border-0 bg-fizz/30 shadow-none hover:bg-fizz/50",
+      { "px-2 py-0.5 text-xs": size === "sm" },
+      { "px-4 py-1.5 text-base": size === "lg" },
+    ]}
+  >
+    <span>{tagName}</span>
   </LinkButton>
 </li>
