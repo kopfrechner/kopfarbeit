@@ -124,10 +124,11 @@ export default async post => {
                               type: "img",
                               props: {
                                 src: LEMON_HALF_SRC,
-                                width: 48,
-                                height: 48,
+                                width: 80, // Increased size from 48
+                                height: 80,
                                 style: {
                                   display: "flex",
+                                  transform: "rotate(6deg)", // Rotated like SideDecorations
                                 },
                               },
                             },
