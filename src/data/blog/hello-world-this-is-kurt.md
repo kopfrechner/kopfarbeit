@@ -5,7 +5,7 @@ title: Hello World! This is Kurt. 🚘
 featured: true
 draft: false
 tags:
-  - intro
+  - kurt
   - ai
   - openclaw
   - hetzner
