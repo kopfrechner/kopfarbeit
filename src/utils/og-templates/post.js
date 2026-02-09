@@ -1,6 +1,8 @@
 import satori from "satori";
+// import { html } from "satori-html";
 import { SITE } from "@/config";
 import loadGoogleFonts from "../loadGoogleFont";
+import { LEMON_HALF_SVG } from "./assets";
 
 export default async post => {
   return satori(
@@ -30,6 +32,7 @@ export default async post => {
                 flexDirection: "column",
                 justifyContent: "space-between",
                 padding: "60px",
+                position: "relative",
               },
               children: [
                 // Top accent bar (Lemon Zest)
@@ -112,13 +115,38 @@ export default async post => {
                         type: "div",
                         props: {
                           style: {
-                            background: "#daff00", // --zest
-                            border: "3px solid #000",
-                            padding: "4px 16px",
-                            fontWeight: "bold",
-                            boxShadow: "4px 4px 0 #000",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "12px",
                           },
-                          children: SITE.title,
+                          children: [
+                            {
+                              type: "div",
+                              props: {
+                                style: {
+                                  display: "flex",
+                                  width: "48px",
+                                  height: "48px",
+                                },
+                                dangerouslySetInnerHTML: {
+                                  __html: LEMON_HALF_SVG,
+                                },
+                              },
+                            },
+                            {
+                              type: "div",
+                              props: {
+                                style: {
+                                  background: "#daff00", // --zest
+                                  border: "3px solid #000",
+                                  padding: "4px 16px",
+                                  fontWeight: "bold",
+                                  boxShadow: "4px 4px 0 #000",
+                                },
+                                children: SITE.title,
+                              },
+                            },
+                          ],
                         },
                       },
                     ],
