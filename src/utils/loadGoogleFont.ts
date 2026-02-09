@@ -47,6 +47,12 @@ async function loadGoogleFonts(
       weight: 400,
       style: "normal",
     },
+    {
+      name: "Noto Emoji",
+      font: "Noto+Emoji",
+      weight: 400,
+      style: "normal",
+    },
   ];
 
   const fonts = await Promise.all(
