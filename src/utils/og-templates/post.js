@@ -2,96 +2,7 @@ import satori from "satori";
 // import { html } from "satori-html";
 import { SITE } from "@/config";
 import loadGoogleFonts from "../loadGoogleFont";
-
-// const markup = html`<div
-//       style={{
-//         background: "#fefbfb",
-//         width: "100%",
-//         height: "100%",
-//         display: "flex",
-//         alignItems: "center",
-//         justifyContent: "center",
-//       }}
-//     >
-//       <div
-//         style={{
-//           position: "absolute",
-//           top: "-1px",
-//           right: "-1px",
-//           border: "4px solid #000",
-//           background: "#ecebeb",
-//           opacity: "0.9",
-//           borderRadius: "4px",
-//           display: "flex",
-//           justifyContent: "center",
-//           margin: "2.5rem",
-//           width: "88%",
-//           height: "80%",
-//         }}
-//       />
-
-//       <div
-//         style={{
-//           border: "4px solid #000",
-//           background: "#fefbfb",
-//           borderRadius: "4px",
-//           display: "flex",
-//           justifyContent: "center",
-//           margin: "2rem",
-//           width: "88%",
-//           height: "80%",
-//         }}
-//       >
-//         <div
-//           style={{
-//             display: "flex",
-//             flexDirection: "column",
-//             justifyContent: "space-between",
-//             margin: "20px",
-//             width: "90%",
-//             height: "90%",
-//           }}
-//         >
-//           <p
-//             style={{
-//               fontSize: 72,
-//               fontWeight: "bold",
-//               maxHeight: "84%",
-//               overflow: "hidden",
-//             }}
-//           >
-//             {post.data.title}
-//           </p>
-//           <div
-//             style={{
-//               display: "flex",
-//               justifyContent: "space-between",
-//               width: "100%",
-//               marginBottom: "8px",
-//               fontSize: 28,
-//             }}
-//           >
-//             <span>
-//               by{" "}
-//               <span
-//                 style={{
-//                   color: "transparent",
-//                 }}
-//               >
-//                 "
-//               </span>
-//               <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-//                 {post.data.author}
-//               </span>
-//             </span>
-
-//             <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-//               {SITE.title}
-//             </span>
-//           </div>
-//         </div>
-//       </div>
-//     </div>`;
+import { LEMON_HALF_SRC } from "./assets";
 
 export default async post => {
   return satori(
@@ -99,119 +10,148 @@ export default async post => {
       type: "div",
       props: {
         style: {
-          background: "#fefbfb",
+          background: "#fffdf5", // --background
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          padding: "40px",
         },
         children: [
           {
             type: "div",
             props: {
               style: {
-                position: "absolute",
-                top: "-1px",
-                right: "-1px",
-                border: "4px solid #000",
-                background: "#ecebeb",
-                opacity: "0.9",
-                borderRadius: "4px",
+                background: "#ffffff", // --card-bg
+                border: "4px solid #000000", // --ink
+                boxShadow: "12px 12px 0 #000000", // --shadow-neo
+                width: "100%",
+                height: "100%",
                 display: "flex",
-                justifyContent: "center",
-                margin: "2.5rem",
-                width: "88%",
-                height: "80%",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                padding: "60px",
+                position: "relative",
               },
-            },
-          },
-          {
-            type: "div",
-            props: {
-              style: {
-                border: "4px solid #000",
-                background: "#fefbfb",
-                borderRadius: "4px",
-                display: "flex",
-                justifyContent: "center",
-                margin: "2rem",
-                width: "88%",
-                height: "80%",
-              },
-              children: {
-                type: "div",
-                props: {
-                  style: {
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    margin: "20px",
-                    width: "90%",
-                    height: "90%",
+              children: [
+                // Top accent bar (Lemon Zest)
+                {
+                  type: "div",
+                  props: {
+                    style: {
+                      position: "absolute",
+                      top: "0",
+                      left: "0",
+                      width: "100%",
+                      height: "16px",
+                      background: "#daff00", // --zest
+                      borderBottom: "4px solid #000000",
+                    },
                   },
-                  children: [
-                    {
-                      type: "p",
-                      props: {
-                        style: {
-                          fontSize: 72,
-                          fontWeight: "bold",
-                          maxHeight: "84%",
-                          overflow: "hidden",
-                        },
-                        children: post.data.title,
-                      },
-                    },
-                    {
-                      type: "div",
-                      props: {
-                        style: {
-                          display: "flex",
-                          justifyContent: "space-between",
-                          width: "100%",
-                          marginBottom: "8px",
-                          fontSize: 28,
-                        },
-                        children: [
-                          {
-                            type: "span",
-                            props: {
-                              children: [
-                                "by ",
-                                {
-                                  type: "span",
-                                  props: {
-                                    style: { color: "transparent" },
-                                    children: '"',
-                                  },
-                                },
-                                {
-                                  type: "span",
-                                  props: {
-                                    style: {
-                                      overflow: "hidden",
-                                      fontWeight: "bold",
-                                    },
-                                    children: post.data.author,
-                                  },
-                                },
-                              ],
-                            },
-                          },
-                          {
-                            type: "span",
-                            props: {
-                              style: { overflow: "hidden", fontWeight: "bold" },
-                              children: SITE.title,
-                            },
-                          },
-                        ],
-                      },
-                    },
-                  ],
                 },
-              },
+                // Title
+                {
+                  type: "div",
+                  props: {
+                    style: {
+                      display: "flex",
+                      flexDirection: "column",
+                      marginTop: "40px", // clearance for top bar
+                    },
+                    children: [
+                      {
+                        type: "h1",
+                        props: {
+                          style: {
+                            fontFamily: "Archivo Black",
+                            fontSize: "84px",
+                            lineHeight: "0.9",
+                            textTransform: "uppercase",
+                            color: "#000000",
+                            margin: "0",
+                            wordBreak: "break-word",
+                          },
+                          children: post.data.title,
+                        },
+                      },
+                      // Date / Tags could go here
+                    ],
+                  },
+                },
+                // Footer (Author + Site)
+                {
+                  type: "div",
+                  props: {
+                    style: {
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "flex-end",
+                      fontFamily: "JetBrains Mono",
+                      fontSize: "32px",
+                      borderTop: "4px solid #000000",
+                      paddingTop: "24px",
+                    },
+                    children: [
+                      {
+                        type: "div",
+                        props: {
+                          style: {
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "12px",
+                          },
+                          children: [
+                            {
+                              type: "img",
+                              props: {
+                                src: LEMON_HALF_SRC,
+                                width: 80, // Increased size from 48
+                                height: 80,
+                                style: {
+                                  display: "flex",
+                                  transform: "rotate(6deg)", // Rotated like SideDecorations
+                                },
+                              },
+                            },
+                            {
+                              type: "span",
+                              props: {
+                                children: "by " + post.data.author,
+                              },
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        type: "div",
+                        props: {
+                          style: {
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "12px",
+                          },
+                          children: [
+                            {
+                              type: "div",
+                              props: {
+                                style: {
+                                  background: "#daff00", // --zest
+                                  border: "3px solid #000",
+                                  padding: "4px 16px",
+                                  fontWeight: "bold",
+                                  boxShadow: "4px 4px 0 #000",
+                                },
+                                children: SITE.title,
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
             },
           },
         ],
@@ -220,9 +160,8 @@ export default async post => {
     {
       width: 1200,
       height: 630,
-      embedFont: true,
       fonts: await loadGoogleFonts(
-        post.data.title + post.data.author + SITE.title + "by"
+        post.data.title + post.data.author + SITE.title
       ),
     }
   );

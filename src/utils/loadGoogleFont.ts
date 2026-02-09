@@ -3,7 +3,8 @@ async function loadGoogleFont(
   text: string,
   weight: number
 ): Promise<ArrayBuffer> {
-  const API = `https://fonts.googleapis.com/css2?family=${font}:wght@${weight}&text=${encodeURIComponent(text)}`;
+  // Use a reliable subset or full font if subsetting fails
+  const API = `https://fonts.googleapis.com/css2?family=${font}:wght@${weight}`;
 
   const css = await (
     await fetch(API, {
@@ -36,21 +37,29 @@ async function loadGoogleFonts(
 > {
   const fontsConfig = [
     {
-      name: "IBM Plex Mono",
-      font: "IBM+Plex+Mono",
+      name: "JetBrains Mono",
+      font: "JetBrains+Mono",
       weight: 400,
       style: "normal",
     },
     {
-      name: "IBM Plex Mono",
-      font: "IBM+Plex+Mono",
-      weight: 700,
-      style: "bold",
+      name: "Archivo Black",
+      font: "Archivo+Black",
+      weight: 400,
+      style: "normal",
+    },
+    {
+      name: "Noto Emoji",
+      font: "Noto+Color+Emoji", // Changed to Color Emoji for better support
+      weight: 400,
+      style: "normal",
     },
   ];
 
   const fonts = await Promise.all(
     fontsConfig.map(async ({ name, font, weight, style }) => {
+      // Pass text only for optimization, but might cause missing glyphs if cache is cold
+      // Trying to fetch full font instead by ignoring text param in loadGoogleFont
       const data = await loadGoogleFont(font, text, weight);
       return { name, data, weight, style };
     })
