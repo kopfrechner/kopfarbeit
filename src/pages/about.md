@@ -8,7 +8,7 @@ description: "A fresh place for thoughts and code. Like a Soda Zitrone for your 
 
 <img src="/profile.webp" class="sm:float-right sm:w-1/3 sm:ml-4 border-neo shadow-neo mb-4" alt="Christoph Kopf" />
 
-I call this blog **_sodazitron.dev_** because **_soda zitron_** is to me is a really refreshing and energizing drink 🍋 It vanishes the fog from the mind and helps to think clearly. Hope the blog is as refreshing, thanks for stopping by.
+I call this blog **_sodazitron.dev_** because **_soda zitron_** is a refreshing and energizing drink 🍋 It vanishes the fog from the mind and helps to think clearly. Hope the blog is as refreshing, thanks for stopping by.
 
 I personally live in **Linz**, Austria, studied **Software Engineering** at **FH Hagenberg** and graduated in 2012. I started out in research, before moving into web engineering.
 
