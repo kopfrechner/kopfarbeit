@@ -17,5 +17,7 @@ I personally live in **Linz**, Austria, studied **Software Engineering** at **FH
 Stay refreshed.
 
 
-<img src="https://ghchart.rshah.org/00f0ff/kopfrechner" alt="GitHub Contributions Chart" class="dark:hidden" />
-<img src="https://ghchart.rshah.org/ff00ea/kopfrechner" alt="GitHub Contributions Chart" class="hidden dark:block" />
+<a href="https://github.com/kopfrechner" target="_blank" rel="noopener noreferrer">
+  <img src="https://ghchart.rshah.org/00f0ff/kopfrechner" alt="GitHub Contributions Chart" class="dark:hidden" />
+  <img src="https://ghchart.rshah.org/ff00ea/kopfrechner" alt="GitHub Contributions Chart" class="hidden dark:block" />
+</a>
