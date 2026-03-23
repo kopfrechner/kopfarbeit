@@ -9,11 +9,11 @@ import { SITE } from "@/config";
 const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
 ---
 
-<Layout title={`Search | ${SITE.title}`} noindex={true}>
+<Layout title={`Suche | ${SITE.title}`} noindex={true}>
   <Header />
   <Main
-    pageTitle="Search"
-    pageDesc="Search for an article ..."
+    pageTitle="Suche"
+    pageDesc="Suche nach einem Artikel ..."
     singleCard={true}
   >
     <div id="pagefind-search" transition:persist data-backurl={backUrl}></div>
@@ -40,7 +40,7 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
       if (import.meta.env.DEV) {
         pageFindSearch.innerHTML = `
             <div class="bg-muted/75 rounded p-4 space-y-4 mb-4">
-              <p><strong>DEV mode Warning! </strong>You need to build the project at least once to see the search results during development.</p>
+              <p><strong>DEV-Modus Warnung! </strong>Du musst das Projekt mindestens einmal bauen (npm run build), um die Suchergebnisse während der Entwicklung zu sehen.</p>
               <code class="block bg-black text-white px-2 py-1 rounded">npm run build</code>
             </div>
           `;

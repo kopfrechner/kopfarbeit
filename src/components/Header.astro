@@ -27,7 +27,7 @@ const isActive = (path: string) => {
   href="#main-content"
   class="absolute start-16 -top-full z-50 bg-background px-3 py-2 text-accent backdrop-blur-lg transition-all focus:top-4"
 >
-  Skip to content
+  Zum Inhalt springen
 </a>
 
 <header
@@ -74,7 +74,7 @@ const isActive = (path: string) => {
             href="/posts"
             class:list={["nav-item", { "active-nav": isActive("/posts") }]}
           >
-            Posts
+            Beiträge
           </a>
         </li>
         <li class="col-span-2 md:col-span-1">
@@ -90,7 +90,7 @@ const isActive = (path: string) => {
             href="/about"
             class:list={["nav-item", { "active-nav": isActive("/about") }]}
           >
-            About
+            Über mich
           </a>
         </li>
         {
@@ -125,11 +125,11 @@ const isActive = (path: string) => {
                   isActive("/search"),
               },
             ]}
-            title="Search"
+            title="Suche"
             aria-label="search"
           >
             <IconSearch />
-            <span class="sr-only">Search</span>
+            <span class="sr-only">Suche</span>
           </LinkButton>
         </li>
         {
@@ -138,7 +138,7 @@ const isActive = (path: string) => {
               <button
                 id="theme-btn"
                 class="focus-outline relative flex h-12 w-full items-center justify-center border-neo bg-background text-foreground shadow-neo transition-all md:size-10 md:border-2 md:shadow-[4px_4px_0px_var(--shadow-color)]"
-                title="Toggles light & dark"
+                title="Wechselt zwischen Hell und Dunkel"
                 aria-label="auto"
                 aria-live="polite"
               >
@@ -146,7 +146,7 @@ const isActive = (path: string) => {
                   <IconMoon class="absolute top-[50%] left-[50%] size-5 -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
                   <IconSunHigh class="absolute top-[50%] left-[50%] size-5 -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
                 </div>
-                <span class="sr-only">Toggle Theme</span>
+                <span class="sr-only">Theme umschalten</span>
               </button>
             </li>
           )

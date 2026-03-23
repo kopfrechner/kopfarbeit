@@ -31,13 +31,12 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <h1
           class="my-4 font-heading text-5xl leading-[0.9] font-bold tracking-tighter uppercase sm:my-8 sm:text-7xl"
         >
-          Sodazitron: <span class="bg-fizz px-2 text-ink">Freshly Squeezed</span
-          > Code & Thoughts
+          Sodazitron: <span class="bg-fizz px-2 text-ink">Frisch gepresster</span> Code & Gedanken
         </h1>
 
         <p class="text-xl leading-tight font-bold sm:text-2xl">
-          Refreshing perspectives on software engineering, AI, and digital
-          craftsmanship.
+          Erfrischende Perspektiven auf Software Engineering, KI und digitales
+          Handwerk.
         </p>
         <div class="mt-10 flex flex-wrap gap-4">
           <LinkButton
@@ -45,14 +44,14 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             variant="button"
             class="bg-fizz px-8 py-3 text-lg font-bold text-ink"
           >
-            READ BLOG
+            BLOG LESEN
           </LinkButton>
           <LinkButton
             href="/about/"
             variant="button"
             class="border-neo bg-card-bg px-8 py-3 text-lg font-bold shadow-neo"
           >
-            ABOUT ME
+            ÜBER MICH
           </LinkButton>
         </div>
       </section>
@@ -63,7 +62,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <section id="featured" class:list={["pt-16 pb-8"]}>
           <div class="inline-block border-neo bg-zest px-6 py-2 shadow-neo">
             <h2 class="font-heading text-2xl font-bold tracking-wider text-ink uppercase">
-              Featured
+              Empfohlen
             </h2>
           </div>
           <ul>
@@ -80,7 +79,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <section id="recent-posts" class="pt-16 pb-8">
           <div class="inline-block border-neo bg-zest px-6 py-2 shadow-neo">
             <h2 class="font-heading text-2xl font-bold tracking-wider text-ink uppercase">
-              Recent Posts
+              Neueste Beiträge
             </h2>
           </div>
           <ul>
@@ -99,7 +98,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         variant="button"
         class="px-8 py-3 text-lg font-bold tracking-widest uppercase"
       >
-        All Posts
+        Alle Beiträge
         <IconArrowRight class="ml-2 inline-block size-6 rtl:-rotate-180" />
       </LinkButton>
     </div>

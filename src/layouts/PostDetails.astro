@@ -108,8 +108,7 @@ const nextPost =
           archived && (
             <div class="mb-8 border-neo border-dashed bg-card-bg-secondary p-4 shadow-neo">
               <p class="font-bold italic">
-                This post is archived. It is hidden from the main feed but
-                preserved here for reference.
+                Dieser Beitrag ist archiviert. Er ist im Haupt-Feed verborgen, bleibt aber hier als Referenz erhalten.
               </p>
             </div>
           )
@@ -166,7 +165,7 @@ const nextPost =
               >
                 <IconChevronLeft class="inline-block flex-none rtl:rotate-180" />
                 <div>
-                  <span>Previous Post</span>
+                  <span>Vorheriger Beitrag</span>
                   <div class="text-sm text-accent/85">{prevPost.title}</div>
                 </div>
               </a>
@@ -179,7 +178,7 @@ const nextPost =
                 class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"
               >
                 <div>
-                  <span>Next Post</span>
+                  <span>Nächster Beitrag</span>
                   <div class="text-sm text-accent/85">{nextPost.title}</div>
                 </div>
                 <IconChevronRight class="inline-block flex-none rtl:rotate-180" />
@@ -261,7 +260,7 @@ const nextPost =
   /** Attaches copy buttons to code blocks in the document,
    * allowing users to copy code easily. */
   function attachCopyButtons() {
-    const copyButtonLabel = "Copy";
+    const copyButtonLabel = "Kopieren";
     const codeBlocks = Array.from(document.querySelectorAll("pre"));
 
     for (const codeBlock of codeBlocks) {
@@ -300,7 +299,7 @@ const nextPost =
       await navigator.clipboard.writeText(text ?? "");
 
       // visual feedback that task is completed
-      button.innerText = "Copied";
+      button.innerText = "Kopiert";
 
       setTimeout(() => {
         button.innerText = copyButtonLabel;
