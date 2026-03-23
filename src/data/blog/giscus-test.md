@@ -8,13 +8,13 @@ draft: true
 tags:
   - test
   - giscus
-description: A simple post to verify if Giscus comments are loading correctly.
+description: Ein einfacher Beitrag, um zu überprüfen, ob Giscus-Kommentare korrekt geladen werden.
 ---
 
 ## Giscus Test
 
-This is a test post to verify the Giscus integration.
+Dies ist ein Testbeitrag zur Überprüfung der Giscus-Integration.
 
-You should see a comment section below this content.
+Du solltest unter diesem Inhalt einen Kommentarbereich sehen.
 
-If you are running on `localhost`, you might see a discussion created in your GitHub repository corresponding to this slug (`giscus-integration-test`).
+Wenn du auf `localhost` ausführst, siehst du möglicherweise eine Diskussion in deinem GitHub-Repository, die diesem Slug entspricht (`giscus-integration-test`).

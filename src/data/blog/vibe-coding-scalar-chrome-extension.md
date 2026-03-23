@@ -1,7 +1,7 @@
 ---
 author: Christoph Kopf
 pubDatetime: 2026-01-31T12:00:00Z
-title: Vibe Coding an OpenAPI Viewer Chrome Extension
+title: Vibe Coding einer OpenAPI Viewer Chrome Extension
 featured: true
 draft: false
 tags:
@@ -9,34 +9,34 @@ tags:
   - openapi
   - scalar
   - gemini-cli
-description: How I built a Scalar OpenAPI Viewer Chrome extension using Gemini CLI, navigated the Manifest V3 sandbox, and faced the Google Web Store review process.
+description: Wie ich eine Scalar OpenAPI Viewer Chrome Extension mit dem Gemini CLI erstellt habe, durch die Manifest V3 Sandbox navigiert bin und mich dem Review-Prozess des Google Web Stores gestellt habe.
 ---
 
-Today I "vibe coded" a simple [Google Chrome extension](https://chromewebstore.google.com/detail/enljnjkaijiflghcdkhgoimoeecifbdh). It was my first time building one, and I didn't even read the documentation.
+Heute habe ich eine einfache [Google Chrome Extension](https://chromewebstore.google.com/detail/enljnjkaijiflghcdkhgoimoeecifbdh) "vibe-gecodet". Es war mein erstes Mal, dass ich eine entwickelt habe, und ich habe nicht einmal die Dokumentation gelesen.
 
-I used the **Gemini CLI** and VS Code to create **Scalar OpenAPI Viewer**, a tool to render OpenAPI/Swagger files beautifully using [Scalar](https://scalar.com/). The project is open source: [Scalar Chrome Extension](https://github.com/kopfrechner/scalar-chrome-extension).
+Ich habe das **Gemini CLI** und VS Code verwendet, um den **Scalar OpenAPI Viewer** zu erstellen, ein Tool, um OpenAPI/Swagger-Dateien wunderschön mit [Scalar](https://scalar.com/) zu rendern. Das Projekt ist Open Source: [Scalar Chrome Extension](https://github.com/kopfrechner/scalar-chrome-extension).
 
-The problem was simple: I often hit raw OpenAPI spec files (JSON or YAML) and don't have a proper editor or Swagger UI handy. I wanted a simple, private developer tool to fix that.
+Das Problem war einfach: Ich stoße oft auf rohe OpenAPI-Spezifikationsdateien (JSON oder YAML) und habe keinen passenden Editor oder eine Swagger UI griffbereit. Ich wollte ein einfaches, privates Entwicklertool, um das zu lösen.
 
-## The Process
+## Der Prozess
 
-I started with a vague idea and let the AI drive. I didn't verify permissions or read up on Manifest V3; I just asked Gemini to scaffold the project. We hit walls, broke things, and fixed them. That's "vibe coding" to me—iterating fast with an assistant until the software feels right. Though, i review all changes and want to get a feeling of how the code is working under the hood.
+Ich begann mit einer vagen Idee und ließ die KI fahren. Ich habe keine Berechtigungen überprüft oder mich über Manifest V3 eingelesen; ich habe Gemini einfach gebeten, das Projekt zu scaffolden. Wir sind gegen Wände gelaufen, haben Dinge kaputt gemacht und sie wieder repariert. Das ist "Vibe Coding" für mich – schnelles Iterieren mit einem Assistenten, bis sich die Software richtig anfühlt. Dennoch überprüfe ich alle Änderungen und möchte ein Gefühl dafür bekommen, wie der Code unter der Haube funktioniert.
 
-## Technical Hurdles
+## Technische Hürden
 
-My [git history](https://github.com/kopfrechner/scalar-chrome-extension/commits/main/) shows exactly where we tripped up.
+Meine [Git History](https://github.com/kopfrechner/scalar-chrome-extension/commits/main/) zeigt genau, wo wir gestolpert sind.
 
-### 1. The Sandbox
+### 1. Die Sandbox
 
-I wanted to use the Scalar API Reference library, so my first instinct was to just load the JS from a CDN. Chrome's Manifest V3 blocked that immediately. The Content Security Policy is strict for extension pages.
+Ich wollte die Scalar API Reference Bibliothek verwenden, also war mein erster Instinkt, einfach das JS von einem CDN zu laden. Chromes Manifest V3 hat das sofort blockiert. Die Content Security Policy ist bei Erweiterungsseiten sehr streng.
 
-To get around it, we moved the viewer logic to a "Sandboxed" page (`viewer.html`). This isolates the scripts from the rest of the extension's privileges but allows them to run.
+Um das zu umgehen, haben wir die Viewer-Logik auf eine "Sandboxing"-Seite (`viewer.html`) verschoben. Das isoliert die Skripte von den restlichen Privilegien der Extension, erlaubt ihnen aber auszuführen.
 
-### 2. The `localStorage` Crash
+### 2. Der `localStorage` Absturz
 
-Once the CDN was working, Scalar crashed anyway. It ignores the sandbox context and tries to access `window.localStorage` to save user preferences (like light/dark mode). In a null-origin sandboxed iframe, that throws a `SecurityError`.
+Als das CDN funktionierte, stürzte Scalar trotzdem ab. Es ignoriert den Sandbox-Kontext und versucht, auf `window.localStorage` zuzugreifen, um Benutzereinstellungen (wie Light/Dark Mode) zu speichern. In einem null-origin Sandboxed Iframe wirft das einen `SecurityError`.
 
-We had to code an in-memory mock to shut it up:
+Wir mussten einen In-Memory-Mock programmieren, um es zum Schweigen zu bringen:
 
 ```javascript
 // viewer.js
@@ -58,24 +58,24 @@ try {
 }
 ```
 
-### 3. Permission Anxiety
+### 3. Berechtigungsangst
 
-I initially asked for `<all_urls>` permission so the extension would work on any page. Google creates a terrifying warning for users when you do that.
+Anfänglich habe ich um die `<all_urls>` Berechtigung gebeten, damit die Erweiterung auf jeder Seite funktioniert. Google erzeugt eine furchterregende Warnung für Benutzer, wenn man das tut.
 
-I switched to `activeTab` instead. It only grants access to the _current_ tab when you explicitly click the icon. It's better for privacy and (hopefully) speeds up the review.
+Stattdessen bin ich auf `activeTab` gewechselt. Es gewährt nur Zugriff auf den _aktuellen_ Tab, wenn man explizit auf das Icon klickt. Es ist besser für die Privatsphäre und beschleunigt (hoffentlich) das Review.
 
-## The Web Store Experience
+## Die Web Store Erfahrung
 
-I just wanted to share this with people, so I was annoyed to find a **$5 registration fee** for the Chrome Web Store.
+Ich wollte dies einfach mit Leuten teilen, daher war ich genervt, eine **$5 Registrierungsgebühr** für den Chrome Web Store vorzufinden.
 
-The submission process is tedious. Google asks _a lot_ of privacy questions. Easy for me—I'm not collecting anything—but still a chore.
+Der Einreichungsprozess ist mühsam. Google stellt _sehr viele_ Fragen zur Privatsphäre. Einfach für mich – ich sammle nichts ein – aber trotzdem eine lästige Pflicht.
 
-Now I wait. The review process apparently takes weeks, and the worst part is the lock-in. You can't stop or update the submission once it's triggered. I have a footer update ready to go, but I'm locked out until they finish.
+Jetzt warte ich. Der Review-Prozess dauert anscheinend Wochen, und das Schlimmste ist der Lock-in. Man kann die Einreichung weder stoppen noch aktualisieren, sobald sie ausgelöst wurde. Ich habe ein Footer-Update bereitliegen, aber ich bin ausgesperrt, bis sie fertig sind.
 
-## Thoughts
+## Gedanken
 
-It was a fun experiment. We went from `git init` to submission in Google Chrome Store in exactly **161 minutes** (about 2 hours 40 minutes).
+Es war ein spaßiges Experiment. Wir gingen von `git init` bis zur Einreichung im Google Chrome Store in exakt **161 Minuten** (etwa 2 Stunden 40 Minuten).
 
-In one session, we went from zero knowledge to a mostly automated, fully functional extension with CI/CD and a privacy policy.
+In einer Session gingen wir von null Wissen zu einer größtenteils automatisierten, voll funktionsfähigen Erweiterung mit CI/CD und einer Datenschutzrichtlinie.
 
-While I wait for Google, you can grab the code or sideload it yourself from the [repository](https://github.com/kopfrechner/scalar-chrome-extension).
+Während ich auf Google warte, kannst du dir den Code schnappen oder ihn selbst aus dem [Repository](https://github.com/kopfrechner/scalar-chrome-extension) sideloaden.
