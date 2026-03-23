@@ -35,8 +35,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         </h1>
 
         <p class="text-xl leading-tight font-bold sm:text-2xl">
-          Erfrischende Perspektiven auf Software Engineering, KI und digitales
-          Handwerk.
+          Erfrischende Perspektiven auf Software Engineering, KI und digital craftsmanship.
         </p>
         <div class="mt-10 flex flex-wrap gap-4">
           <LinkButton
@@ -62,7 +61,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <section id="featured" class:list={["pt-16 pb-8"]}>
           <div class="inline-block border-neo bg-zest px-6 py-2 shadow-neo">
             <h2 class="font-heading text-2xl font-bold tracking-wider text-ink uppercase">
-              Empfohlen
+              Featured
             </h2>
           </div>
           <ul>
@@ -79,7 +78,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <section id="recent-posts" class="pt-16 pb-8">
           <div class="inline-block border-neo bg-zest px-6 py-2 shadow-neo">
             <h2 class="font-heading text-2xl font-bold tracking-wider text-ink uppercase">
-              Neueste Beiträge
+              Neueste Posts
             </h2>
           </div>
           <ul>
@@ -98,7 +97,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         variant="button"
         class="px-8 py-3 text-lg font-bold tracking-widest uppercase"
       >
-        Alle Beiträge
+        Alle Posts
         <IconArrowRight class="ml-2 inline-block size-6 rtl:-rotate-180" />
       </LinkButton>
     </div>

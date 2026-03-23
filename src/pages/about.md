@@ -4,7 +4,7 @@ title: "Über mich"
 description: "Ein frischer Ort für Gedanken und Code. Wie ein Soda Zitron für dein Gehirn."
 ---
 
-## Hintergrund
+## Background
 
 <img src="/profile.webp" class="sm:float-right sm:w-1/3 sm:ml-4 border-neo shadow-neo mb-4" alt="Christoph Kopf" />
 
