@@ -18,7 +18,7 @@ Ich habe das **Gemini CLI** und VS Code verwendet, um den **Scalar OpenAPI Viewe
 
 Das Problem war einfach: Ich stoße oft auf rohe OpenAPI-Spezifikationsdateien (JSON oder YAML) und habe keinen passenden Editor oder eine Swagger UI griffbereit. Ich wollte ein einfaches, privates Entwicklertool, um das zu lösen.
 
-![Screenshot of the Scalar OpenAPI Viewer Chrome Extension rendering petstore3.swagger.io](../../assets/images/scalar-viewer-screenshot.png)
+![Screenshot of the Scalar OpenAPI Viewer Chrome Extension rendering petstore3.swagger.io](../../assets/images/scalar-viewer-screenshot.webp)
 
 ## Der Prozess
 
