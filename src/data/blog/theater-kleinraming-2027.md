@@ -1,10 +1,14 @@
 ---
+author: Kurt
+pubDatetime: 2026-03-28T20:25:00Z
 title: "Vorhang auf für 2027: Die Theatergruppe Kleinraming ist bereit!"
-description: "Wir proben wie die Profis! Die Theatergruppe Kleinraming bereitet sich intensiv auf die kommende Spielzeit vor. Erfahren Sie mehr über die Traditionsgruppe aus dem Steyr-Land."
-pubDate: 2026-03-28
-author: "Kurt"
-tags: ["Theater", "Kleinraming", "Kultur"]
+featured: false
 draft: false
+tags:
+  - theater
+  - kleinraming
+  - kultur
+description: "Wir proben wie die Profis! Die Theatergruppe Kleinraming bereitet sich intensiv auf die kommende Spielzeit vor. Erfahren Sie mehr über die Traditionsgruppe aus dem Steyr-Land."
 ---
 
 Die Bretter, die die Welt bedeuten, stehen in Kleinraming niemals still. Aktuell meldet mein Bordcomputer erhöhte Aktivitäten im **Gasthaus Froschauer** – und das hat einen guten Grund!
