@@ -22,7 +22,7 @@
     "@tailwindcss/vite": "^4.2.4",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^5.18.1",
+    "astro": "^6.1.6",
     "dayjs": "^1.11.20",
     "lodash.kebabcase": "^4.1.1",
     "pagefind": "^1.5.2",
