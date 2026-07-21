@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
-    "@astrojs/rss": "^4.0.15",
+    "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.0",
     "@giscus/react": "^3.1.0",
     "@pagefind/default-ui": "^1.5.2",
