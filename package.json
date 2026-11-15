@@ -34,7 +34,7 @@
     "satori": "^0.63.2",
     "sharp": "^0.35.5",
     "tailwindcss": "^4.1.18",
-    "typewriter-effect": "^2.22.0"
+    "typewriter-effect": "^3.3.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
